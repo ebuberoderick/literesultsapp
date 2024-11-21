@@ -2,6 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 import { FaFacebookF, FaInstagram, FaYoutube, FaPlay, FaTiktok } from "react-icons/fa6";
 import img from "@/public/banImg.png"
+import { IoMailUnreadOutline } from "react-icons/io5";
+import { FaLinkedin } from "react-icons/fa";
 import img2 from "@/public/bannerImg.png"
 
 function page() {
@@ -84,9 +86,89 @@ function page() {
       </div>
 
 
+      <div className="py-24">
 
-
-
+        <div className="pt-12">
+          <div className="max-w-xl text-center p-4 mx-auto">
+            <div className="font-semibold text-xl text-green-700 sm:text-3xl">Our Instructors</div>
+            <div className="text-xs sm:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti quia in modi porro minima nisi iste, fugiat deserunt corrupti voluptas? Animi est repudiandae velit necessitatibus vitae, illo reiciendis omnis.</div>
+          </div>
+        </div>
+        <div className="grid justify-center md:grid-cols-3 max-w-5xl gap-5 mx-auto">
+          <div class="group cursor-pointer overflow-hidden relative h-96 block">
+            <div class="h-full w-full flex flex-col bg-gray-100">
+              <div class="flex-grow"></div>
+              <div class="bg-white z-30 p-4">
+                <div class="text-2xl font-bold hover:text-green-800">Anna naomi</div>
+                <div class="text-sm text-gray-400">Project manager</div>
+              </div>
+            </div>
+            <div
+              class="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
+              <div
+                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                <FaFacebookF />
+              </div>
+              <div
+                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                <FaInstagram />
+              </div>
+              <div
+                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                <FaLinkedin />
+              </div>
+            </div>
+          </div>
+          <div class="group cursor-pointer overflow-hidden relative h-96 block">
+            <div class="h-full w-full flex flex-col bg-gray-100">
+              <div class="flex-grow"></div>
+              <div class="bg-white z-30 p-4">
+                <div class="text-2xl font-bold hover:text-green-800">Anna naomi</div>
+                <div class="text-sm text-gray-400">Project manager</div>
+              </div>
+            </div>
+            <div
+              class="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
+              <div
+                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                <FaFacebookF />
+              </div>
+              <div
+                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                <FaInstagram />
+              </div>
+              <div
+                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                <FaLinkedin />
+              </div>
+            </div>
+          </div>
+          <div class="group cursor-pointer overflow-hidden relative h-96 block">
+            <div class="h-full w-full flex flex-col bg-gray-100">
+              <div class="flex-grow"></div>
+              <div class="bg-white z-30 p-4">
+                <div class="text-2xl font-bold hover:text-green-800">Anna naomi</div>
+                <div class="text-sm text-gray-400">Project manager</div>
+              </div>
+            </div>
+            <div
+              class="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
+              <div
+                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                <FaFacebookF />
+              </div>
+              <div
+                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                <FaInstagram />
+              </div>
+              <div
+                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                <FaLinkedin />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
       <div className="max-w-7xl mx-auto py-12 px-4">
@@ -163,7 +245,7 @@ function page() {
                 <div className="w-10 cursor-pointer h-10 flex items-center justify-center text-white bg-green-500 rounded-full"><FaFacebookF /></div>
                 <div className="w-10 cursor-pointer h-10 flex items-center justify-center text-white bg-green-500 rounded-full"><FaTiktok /></div>
                 <div className="w-10 cursor-pointer h-10 flex items-center justify-center text-white bg-green-500 rounded-full"><FaInstagram /></div>
-                <div className="w-10 cursor-pointer h-10 flex items-center justify-center text-white bg-green-500 rounded-full"><FaYoutube /></div>
+                <div className="w-10 cursor-pointer h-10 flex items-center justify-center text-white bg-green-500 rounded-full"><IoMailUnreadOutline /></div>
               </div>
             </div>
           </div>
