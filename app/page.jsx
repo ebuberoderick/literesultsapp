@@ -11,7 +11,7 @@ import atlas from "@/public/Asset-2.svg"
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 
-function page() {
+function Page() {
   const d = new Date();
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, direction: "ltr", dragFree: false }, [Autoplay()])
   useEffect(() => {
@@ -503,4 +503,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
