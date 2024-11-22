@@ -195,7 +195,7 @@ function page() {
 
 
 
-      <div className="bg-gradient-to-b from-green-950 from-[30%] via-green-800 to-green-700">
+      <div className="bg-gradient-to-b w-full overflow-hidden from-green-950 from-[30%] via-green-800 to-green-700">
         <div className="grid items-center md:grid-cols-5 px-3 py-20 sm:pt-28 mx-auto">
           <div className="space-y-3 md:pl-12 text-white md:space-y-7 col-span-2 py-16">
             <div className="text-2xl font-bold">Testimony</div>
