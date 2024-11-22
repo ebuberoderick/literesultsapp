@@ -24,7 +24,7 @@ function page() {
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, non nisi? Officia architecto magni beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
             </div>
             <div className="flex gap-4">
-              <div className="bg-green-500 rounded-full cursor-pointer py-4 px-9 text-white font-bold">Course List</div>
+              <div className="bg-green-500 rounded-full cursor-pointer py-4 px-9 text-white font-bold">Explore More Courses</div>
               <div className="w-14 h-14 flex justify-center cursor-pointer items-center rounded-full border border-green-500 text-green-500"><FaPlay /></div>
             </div>
             <div className="">
@@ -187,6 +187,11 @@ function page() {
 
 
 
+      {/* what you would be getting  */}
+
+      {/* - *Key Features Section*:
+  - Why Choose Us? (3-4 points, e.g., “Expert Mentors,” “Hands-On Learning,” “Career Opportunities”).
+  - Visual icons or images for each feature. */}
 
 
 
@@ -197,8 +202,8 @@ function page() {
             <div className="text-xs sm:text-base text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti quia in modi porro minima nisi iste, fugiat deserunt corrupti voluptas? Animi est repudiandae velit necessitatibus vitae, illo reiciendis omnis.</div>
           </div>
         </div>
-        <div className="grid justify-center md:grid-cols-3 max-w-5xl gap-5 mx-auto">
-          <div className="group cursor-pointer overflow-hidden relative h-96 block">
+        <div className="px-6 grid md:justify-center md:grid-cols-3 max-w-5xl gap-5 mx-auto">
+          <div className="group bg-black cursor-pointer overflow-hidden relative h-96 block">
             <div className="h-full w-full flex flex-col bg-gray-100">
               <div className="flex-grow"></div>
               <div className="bg-white z-30 p-4">
@@ -206,23 +211,19 @@ function page() {
                 <div className="text-sm text-gray-400">Project manager</div>
               </div>
             </div>
-            <div
-              className="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
-              <div
-                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+            <div className="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
+              <div className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaFacebookF />
               </div>
-              <div
-                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+              <div className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaInstagram />
               </div>
-              <div
-                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+              <div className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaLinkedin />
               </div>
             </div>
           </div>
-          <div className="group cursor-pointer overflow-hidden relative h-96 block">
+          <div className="group bg-black cursor-pointer overflow-hidden relative h-96 block">
             <div className="h-full w-full flex flex-col bg-gray-100">
               <div className="flex-grow"></div>
               <div className="bg-white z-30 p-4">
@@ -230,23 +231,19 @@ function page() {
                 <div className="text-sm text-gray-400">Project manager</div>
               </div>
             </div>
-            <div
-              className="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
-              <div
-                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+            <div className="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
+              <div className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaFacebookF />
               </div>
-              <div
-                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+              <div className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaInstagram />
               </div>
-              <div
-                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+              <div className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaLinkedin />
               </div>
             </div>
           </div>
-          <div className="group cursor-pointer overflow-hidden relative h-96 block">
+          <div className="group bg-black cursor-pointer overflow-hidden relative h-96 block">
             <div className="h-full w-full flex flex-col bg-gray-100">
               <div className="flex-grow"></div>
               <div className="bg-white z-30 p-4">
@@ -254,22 +251,19 @@ function page() {
                 <div className="text-sm text-gray-400">Project manager</div>
               </div>
             </div>
-            <div
-              className="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
-              <div
-                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+            <div className="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
+              <div className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaFacebookF />
               </div>
-              <div
-                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+              <div className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaInstagram />
               </div>
-              <div
-                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+              <div className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaLinkedin />
               </div>
             </div>
           </div>
+
           <div className="">
             <div className="inline-flex -space-x-7 hover:space-x-2 cursor-pointer">
               <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
@@ -283,6 +277,46 @@ function page() {
         </div>
       </div>
 
+
+      <div className=" h-min-screen">
+        <div className="max-w-7xl grid min-h-screen items-center md:grid-cols-2 gap-5 px-3 pt-20 sm:pt-28 mx-auto">
+          <div className="h-full relative">
+            <div className="bg-black h-[30%] w-[30%] absolute -top-9"></div>
+            <div className="bg-black h-[30%] w-[30%] absolute -bottom-7 md:bottom-20 right-3"></div>
+            <div className="bg-black h-[30%] w-[30%] absolute -top-9 right-0"></div>
+            <div className="bg-black h-[30%] w-[30%] absolute top-[25%] right-[35%]"></div>
+            <div className="bg-black h-[30%] w-[30%] absolute -bottom-7 md:bottom-20 left-3"></div>
+            <div className="h-[80%] w-[80%] mx-auto min-h-96 relative grid grid-cols-2 gap-5">
+              <div className="bg-green-700 h-full"></div>
+              <div className="bg-green-700 h-full"></div>
+              <div className="bg-green-700 h-full"></div>
+              <div className="bg-green-700 h-full"></div>
+            </div>
+          </div>
+          <div className="space-y-3 md:space-y-7 py-16">
+            <div className="font-extrabold  text-2xl xl:space-y-4 xl:text-5xl">
+              <div className="">Why Us?</div>
+            </div>
+            <div className="max-w-lg text-xs md:text-sm ">
+              Emphasize unique aspects like expert instructors, real-world projects, and career support. optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, non nisi? Officia architecto magni beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
+            </div>
+            <ul className="max-w-lg list-disc list-inside text-xs md:text-sm">
+              <li>web dev</li>
+              <li>mobile app</li>
+            </ul>
+            <div className="max-w-lg text-xs md:text-sm ">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, non nisi? Officia architecto magni beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
+            </div>
+            <div className="">
+              <div className="flex gap-4">
+                <div className="bg-green-500 rounded-full cursor-pointer py-4 px-9 text-white font-bold">Join our next section</div>
+                <div className="w-14 h-14 flex justify-center cursor-pointer items-center rounded-full border border-green-500 text-green-500"><FaPlay /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="max-w-7xl mx-auto py-12 px-4">
         <div className="lg:h-96 bg-green-800 rounded-2xl relative overflow-hidden lg:overflow-visible">
