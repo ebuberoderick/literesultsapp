@@ -86,86 +86,199 @@ function page() {
       </div>
 
 
-      <div className="py-24">
 
+
+
+      <div className="pt-12">
+        <div className="max-w-xl text-center p-4 mx-auto">
+          <div className="font-semibold text-xl sm:text-3xl">Our Courses</div>
+          <div className="text-xs sm:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti quia in modi porro minima nisi iste, fugiat deserunt corrupti voluptas? Animi est repudiandae velit necessitatibus vitae, illo reiciendis omnis.</div>
+        </div>
+      </div>
+
+
+      <div className="max-w-7xl overflow-hidden grid items-start xl:grid-cols-3 py-12 mx-auto px-5 space-y-6 lg:space-y-12">
+        <div className="space-y-6 z-40 md:space-y-24 md:space-x-3 grid md:grid-cols-2 xl:grid-cols-1 relative xl:top-16">
+          <div data-aos="fade-left" className="xl:w-[276px] bg-green-300 overflow-hidden w-full relative rounded-3xl mx-auto h-[350px] gallery7">
+            <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
+              <div className="font-semibold sm:text-xl">Speed Dating</div>
+              <div className="text-xs">
+                Spark new connections in our fun, relaxed speed dating sessions designed to bring singles together.
+              </div>
+            </div>
+            <div className="w-12 h-12 cursor-pointer bg-white rounded-full absolute top-5 right-5 flex items-center justify-center">
+              {/* <Image draggable={false} src={heart} className="w-1/2" alt="" /> */}
+            </div>
+          </div>
+          <div data-aos="fade-left" className="xl:w-[376px] bg-green-300 overflow-hidden w-full relative xl:left-12 rounded-3xl mx-auto h-[200px] gallery8">
+            <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
+              <div className="font-semibold sm:text-xl">Waterparks and Palmwine Spots</div>
+              <div className="text-xs">
+                Leisure areas for relaxation and socializing.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col items-center md:flex-row xl:flex-col xl:items-end justify-center lg:gap-6">
+          <div data-aos="fade-up" className="h-[200px] bg-green-300 overflow-hidden w-full xl:w-[300px] rounded-3xl gallery9">
+            <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
+              <div className="font-semibold sm:text-xl">Live Music & Entertainment</div>
+              <div className="text-xs">
+                Groove to the beats of top DJs, live bands, and surprise musical performances that will keep you dancing all night.
+              </div>
+            </div>
+          </div>
+          <div className="space-y-20 min-w-96 lg:pb-16 flex-grow">
+            <div className="space-y-8">
+              <div className="relative">
+                <div className="w-8 h-8 right-[48%] top-6 rounded-full bg-[#db7140] absolute z-0"></div>
+                <div className="w-8 h-8 right-[50%] top-14 rounded-full bg-[#cf6c2a] absolute z-0"></div>
+                <div className="w-8 h-8 right-[40%] top-14 rounded-full bg-[#207927] absolute z-0"></div>
+                <div className="w-8 h-8 right-[55%] top-14 rounded-full bg-[#f5d548] absolute z-0"></div>
+                <div className="relative py-10 bg-white backdrop-blur-lg bg-opacity-20 z-10 flex justify-center">
+                  <div className="">
+                    <div className="h-14 w-14 bg-white rounded-xl flex items-center justify-center">
+                      {/* <Image draggable={false} src={fav} className="w-1/2" alt="" /> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="text-center font-semibold text-3xl md:text-5xl">
+                <div className="">What to Expect</div>
+                <div className="">at <span className="">Lite<span className="bg-green-800 text-white">results</span> Service</span></div>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="bg-green-500 rounded-full inline-block cursor-pointer py-4 px-9 text-white font-bold">Rigster for a course</div>
+            </div>
+          </div>
+          <div data-aos="fade-down" className="h-[200px] bg-green-300 overflow-hidden w-full xl:w-[440px] rounded-3xl mt-14 gallery10">
+            <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
+              <div className="font-semibold sm:text-xl">Cultural Showcase</div>
+              <div className="text-xs">
+                Traditional dances, fashion shows, and art exhibitions representing various Nigerian tribes.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="space-y-6 z-40 md:space-y-24 md:space-x-3 grid md:grid-cols-2 xl:grid-cols-1 relative xl:-top-16">
+          <div data-aos="fade-right" className="xl:w-[276px]  bg-green-300 overflow-hidden relative rounded-3xl xl:ml-auto h-[350px] gallery11">
+            <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
+              <div className="font-semibold sm:text-xl">Games and Activities</div>
+              <div className="text-xs">
+                Dive into interactive games, obstacle courses, waterparks, and palm wine spots that promise endless fun and excitement.
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-right" className="xl:w-[276px] bg-green-300 overflow-hidden relative rounded-3xl xl:mx-auto h-[350px] gallery12">
+            <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
+              <div className="font-semibold sm:text-xl">Food and Beverage Stalls</div>
+              <div className="text-xs">
+                Offering diverse Nigerian cuisine and drinks from different regions.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <div className="py-24 bg-green-800">
         <div className="pt-12">
           <div className="max-w-xl text-center p-4 mx-auto">
-            <div className="font-semibold text-xl text-green-700 sm:text-3xl">Our Instructors</div>
-            <div className="text-xs sm:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti quia in modi porro minima nisi iste, fugiat deserunt corrupti voluptas? Animi est repudiandae velit necessitatibus vitae, illo reiciendis omnis.</div>
+            <div className="font-semibold text-xl text-white sm:text-3xl">Our Instructors</div>
+            <div className="text-xs sm:text-base text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti quia in modi porro minima nisi iste, fugiat deserunt corrupti voluptas? Animi est repudiandae velit necessitatibus vitae, illo reiciendis omnis.</div>
           </div>
         </div>
         <div className="grid justify-center md:grid-cols-3 max-w-5xl gap-5 mx-auto">
-          <div class="group cursor-pointer overflow-hidden relative h-96 block">
-            <div class="h-full w-full flex flex-col bg-gray-100">
-              <div class="flex-grow"></div>
-              <div class="bg-white z-30 p-4">
-                <div class="text-2xl font-bold hover:text-green-800">Anna naomi</div>
-                <div class="text-sm text-gray-400">Project manager</div>
+          <div className="group cursor-pointer overflow-hidden relative h-96 block">
+            <div className="h-full w-full flex flex-col bg-gray-100">
+              <div className="flex-grow"></div>
+              <div className="bg-white z-30 p-4">
+                <div className="text-2xl font-bold hover:text-green-800">Anna naomi</div>
+                <div className="text-sm text-gray-400">Project manager</div>
               </div>
             </div>
             <div
-              class="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
+              className="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
               <div
-                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaFacebookF />
               </div>
               <div
-                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaInstagram />
               </div>
               <div
-                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaLinkedin />
               </div>
             </div>
           </div>
-          <div class="group cursor-pointer overflow-hidden relative h-96 block">
-            <div class="h-full w-full flex flex-col bg-gray-100">
-              <div class="flex-grow"></div>
-              <div class="bg-white z-30 p-4">
-                <div class="text-2xl font-bold hover:text-green-800">Anna naomi</div>
-                <div class="text-sm text-gray-400">Project manager</div>
+          <div className="group cursor-pointer overflow-hidden relative h-96 block">
+            <div className="h-full w-full flex flex-col bg-gray-100">
+              <div className="flex-grow"></div>
+              <div className="bg-white z-30 p-4">
+                <div className="text-2xl font-bold hover:text-green-800">Anna naomi</div>
+                <div className="text-sm text-gray-400">Project manager</div>
               </div>
             </div>
             <div
-              class="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
+              className="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
               <div
-                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaFacebookF />
               </div>
               <div
-                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaInstagram />
               </div>
               <div
-                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaLinkedin />
               </div>
             </div>
           </div>
-          <div class="group cursor-pointer overflow-hidden relative h-96 block">
-            <div class="h-full w-full flex flex-col bg-gray-100">
-              <div class="flex-grow"></div>
-              <div class="bg-white z-30 p-4">
-                <div class="text-2xl font-bold hover:text-green-800">Anna naomi</div>
-                <div class="text-sm text-gray-400">Project manager</div>
+          <div className="group cursor-pointer overflow-hidden relative h-96 block">
+            <div className="h-full w-full flex flex-col bg-gray-100">
+              <div className="flex-grow"></div>
+              <div className="bg-white z-30 p-4">
+                <div className="text-2xl font-bold hover:text-green-800">Anna naomi</div>
+                <div className="text-sm text-gray-400">Project manager</div>
               </div>
             </div>
             <div
-              class="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
+              className="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
               <div
-                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaFacebookF />
               </div>
               <div
-                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaInstagram />
               </div>
               <div
-                class="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
                 <FaLinkedin />
               </div>
             </div>
+          </div>
+          <div className="">
+            <div className="inline-flex -space-x-7 hover:space-x-2 cursor-pointer">
+              <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
+              <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
+              <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
+              <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
+              <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
+            </div>
+            <div className="text-white">Other Instructors</div>
           </div>
         </div>
       </div>
