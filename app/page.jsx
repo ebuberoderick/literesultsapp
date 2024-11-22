@@ -1,13 +1,23 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
-import { FaFacebookF, FaInstagram, FaYoutube, FaPlay, FaTiktok } from "react-icons/fa6";
+import React, { useEffect } from 'react'
+import { FaFacebookF, FaInstagram, FaPlay, FaTiktok } from "react-icons/fa6";
 import img from "@/public/banImg.png"
 import { IoMailUnreadOutline } from "react-icons/io5";
+import { TfiAngleLeft, TfiAngleRight } from "react-icons/tfi";
 import { FaLinkedin } from "react-icons/fa";
 import img2 from "@/public/bannerImg.png"
+import atlas from "@/public/Asset-2.svg"
+import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
 
 function page() {
   const d = new Date();
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, direction: "ltr", dragFree: false }, [Autoplay()])
+  useEffect(() => {
+    if (emblaApi) { console.log(emblaApi.slideNodes()) }
+  }, [emblaApi])
+
   return (
     <div className='select-none'>
 
@@ -181,21 +191,112 @@ function page() {
         </div>
       </div>
 
+      {/* <div className=""></div> */}
+
+
+
+      <div className="bg-gradient-to-b from-green-950 from-[30%] via-green-800 to-green-700">
+        <div className="grid items-center md:grid-cols-5 px-3 py-20 sm:pt-28 mx-auto">
+          <div className="space-y-3 md:pl-12 text-white md:space-y-7 col-span-2 py-16">
+            <div className="text-2xl font-bold">Testimony</div>
+            <div className=" text-5xl">
+              <div className="">What Our <span className='text-[#f9820b]'>Students</span></div>
+              <div className="">Have to say</div>
+            </div>
+            <div className="">
+              <div className="embla" ref={emblaRef}>
+                <div className="embla__container">
+                  <div className="embla__slide">
+                    <div className="space-y-3">
+                      <div className="">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nulla reiciendis dolore rem? Consequatur consequuntur, quaerat libero, quam provident minima a, possimus dolore aut sunt eos explicabo corrupti ut assumenda!
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <div className="w-12 h-12 bg-green-500 rounded-full"></div>
+                        <div className="-space-y-1">
+                          <div className="font-bold">John Doe</div>
+                          <div className="text-sm">Mobile Dev student</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="embla__slide">
+                    <div className="space-y-3">
+                      <div className="">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nulla reiciendis dolore rem? Consequatur consequuntur, quaerat libero, quam provident minima a, possimus dolore aut sunt eos explicabo corrupti ut assumenda!
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <div className="w-12 h-12 bg-green-500 rounded-full"></div>
+                        <div className="-space-y-1">
+                          <div className="font-bold">John Doe</div>
+                          <div className="text-sm">Mobile Dev student</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="embla__slide">
+                    <div className="space-y-3">
+                      <div className="">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nulla reiciendis dolore rem? Consequatur consequuntur, quaerat libero, quam provident minima a, possimus dolore aut sunt eos explicabo corrupti ut assumenda!
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <div className="w-12 h-12 bg-green-500 rounded-full"></div>
+                        <div className="-space-y-1">
+                          <div className="font-bold">John Doe</div>
+                          <div className="text-sm">Mobile Dev student</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="embla__slide">
+                    <div className="space-y-3">
+                      <div className="">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nulla reiciendis dolore rem? Consequatur consequuntur, quaerat libero, quam provident minima a, possimus dolore aut sunt eos explicabo corrupti ut assumenda!
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <div className="w-12 h-12 bg-green-500 rounded-full"></div>
+                        <div className="-space-y-1">
+                          <div className="font-bold">John Doe</div>
+                          <div className="text-sm">Mobile Dev student</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="embla__slide">
+                    <div className="space-y-3">
+                      <div className="">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nulla reiciendis dolore rem? Consequatur consequuntur, quaerat libero, quam provident minima a, possimus dolore aut sunt eos explicabo corrupti ut assumenda!
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <div className="w-12 h-12 bg-green-500 rounded-full"></div>
+                        <div className="-space-y-1">
+                          <div className="font-bold">John Doe</div>
+                          <div className="text-sm">Mobile Dev student</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex relative -top-14 right-8">
+                <div className="flex-grow"></div>
+                <div className="flex gap-3">
+                  <div onClick={() => emblaApi.scrollPrev()} className="w-10 h-10 flex items-center justify-center rounded-full bg-green-700 cursor-pointer"><TfiAngleLeft className='text-white' /></div>
+                  <div onClick={() => emblaApi.scrollNext()} className="w-10 h-10 flex items-center justify-center rounded-full bg-green-700 cursor-pointer"><TfiAngleRight className='text-white' /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="h-full relative col-span-3">
+            <Image src={atlas} className='mx-auto animate-pulse relative bottom-0' alt='banner image' draggable={false} />
+          </div>
+        </div>
+      </div>
 
 
 
 
-
-
-      {/* what you would be getting  */}
-
-      {/* - *Key Features Section*:
-  - Why Choose Us? (3-4 points, e.g., “Expert Mentors,” “Hands-On Learning,” “Career Opportunities”).
-  - Visual icons or images for each feature. */}
-
-
-
-      <div className="py-24 bg-green-800">
+      <div className="py-24 bg-green-700">
         <div className="pt-12">
           <div className="max-w-xl text-center p-4 mx-auto">
             <div className="font-semibold text-xl text-white sm:text-3xl">Our Instructors</div>
