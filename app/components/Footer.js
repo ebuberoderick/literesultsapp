@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { IoMailUnreadOutline } from "react-icons/io5";
 import img2 from "@/public/bannerImg.png"
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa6";
+import Link from 'next/link';
 
 
 function Footer() {
@@ -17,7 +18,11 @@ function Footer() {
                             <div className="text-white">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni adipisci ipsum nisi id veritatis repellendus, quos iureae tenetur quisquam sunt iusto explicabo recusandae.
                             </div>
-                            <div className="bg-green-500 rounded-full inline-block cursor-pointer py-4 px-9 text-white font-bold">Rigster for a course</div>
+                            <div>
+                                <Link href="/courses">
+                                    <div className="bg-green-500 rounded-full inline-block cursor-pointer py-4 px-9 text-white font-bold">Rigster for a course</div>
+                                </Link>
+                            </div>
                         </div>
                         <div className="w-full h-[300%] bg-green-800 rounded-full absolute top-0 left-[50%] z-0 shadow-2xl shadow-green-400"></div>
                     </div>

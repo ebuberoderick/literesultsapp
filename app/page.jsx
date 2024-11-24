@@ -9,6 +9,7 @@ import atlas from "@/public/Asset-2.svg"
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import Footer from './components/Footer';
+import Link from 'next/link';
 
 function Page() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, direction: "ltr", dragFree: false }, [Autoplay()])
@@ -32,7 +33,9 @@ function Page() {
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, non nisi? Officia architecto magni beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
             </div>
             <div className="flex gap-4">
-              <div className="bg-green-500 rounded-full cursor-pointer py-4 px-9 text-white font-bold">Explore More Courses</div>
+              <Link href="/courses">
+                <div className="bg-green-500 rounded-full cursor-pointer py-4 px-9 text-white font-bold">Explore More Courses</div>
+              </Link>
               <div className="w-14 h-14 flex justify-center cursor-pointer items-center rounded-full border border-green-500 text-green-500"><FaPlay /></div>
             </div>
             <div className="">
@@ -85,7 +88,9 @@ function Page() {
             </div>
             <div className="">
               <div className="flex gap-4">
-                <div className="bg-green-500 rounded-full cursor-pointer py-4 px-9 text-white font-bold">Learn More About Us</div>
+                <Link href="/courses">
+                  <div className="bg-green-500 rounded-full cursor-pointer py-4 px-9 text-white font-bold">Learn More About Us</div>
+                </Link>
                 <div className="w-14 h-14 flex justify-center cursor-pointer items-center rounded-full border border-green-500 text-green-500"><FaPlay /></div>
               </div>
             </div>
@@ -157,7 +162,9 @@ function Page() {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="bg-green-500 rounded-full inline-block cursor-pointer py-4 px-9 text-white font-bold">Rigster for a course</div>
+              <Link href="/courses">
+                <div className="bg-green-800 rounded-full inline-block cursor-pointer py-4 px-9 text-white font-bold">Rigster for a course</div>
+              </Link>
             </div>
           </div>
           <div data-aos="fade-down" className="h-[200px] bg-green-300 overflow-hidden w-full xl:w-[440px] rounded-3xl mt-14 gallery10">
@@ -413,7 +420,9 @@ function Page() {
             </div>
             <div className="">
               <div className="flex gap-4">
-                <div className="bg-green-500 rounded-full cursor-pointer py-4 px-9 text-white font-bold">Join our next section</div>
+                <Link href="/courses">
+                  <div className="bg-green-700 rounded-full cursor-pointer py-4 px-9 text-white font-bold">Join our next section</div>
+                </Link>
                 <div className="w-14 h-14 flex justify-center cursor-pointer items-center rounded-full border border-green-500 text-green-500"><FaPlay /></div>
               </div>
             </div>
