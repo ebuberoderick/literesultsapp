@@ -1,12 +1,13 @@
 import React from 'react'
 import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 
 function Page() {
     return (
         <div>
+            <Navbar />
 
-
-            <div className="bg-green-800 py-14">
+            <div className="bg-green-800 py-14 pt-36">
                 <div className="max-w-7xl grid items-center md:grid-cols-2 gap-5 px-3 mx-auto">
                     <div className="h-full relative">
                         <div className="h-[80%] w-[80%] mx-auto min-h-96 relative grid grid-cols-2 gap-5">

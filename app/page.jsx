@@ -10,6 +10,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import Footer from './components/Footer';
 import Link from 'next/link';
+import Navbar from './components/Navbar';
 
 function Page() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, direction: "ltr", dragFree: false }, [Autoplay()])
@@ -19,7 +20,7 @@ function Page() {
 
   return (
     <div className='select-none'>
-
+      <Navbar />
       {/* Header */}
       <div className="bg-green-950 ">
         <div className="max-w-7xl grid min-h-screen items-center md:grid-cols-2 gap-5 px-3 pt-20 sm:pt-28 mx-auto">
@@ -57,7 +58,7 @@ function Page() {
 
 
 
-      <div className="bg-gradient-to-b from-green-950 from-[30%] via-green-800 to-green-700 h-min-screen">
+      <div id='about' className="bg-gradient-to-b from-green-950 from-[30%] via-green-800 to-green-700 h-min-screen">
         <div className="pt-12">
           <div className="max-w-xl text-center p-4 text-white mx-auto">
             <div className="font-semibold text-xl sm:text-3xl">Lorem, ipsum dolor sit amet</div>
@@ -200,7 +201,7 @@ function Page() {
 
 
 
-      <div className="bg-gradient-to-b w-full overflow-hidden from-green-950 from-[30%] via-green-800 to-green-700">
+      <div id='testimonials' className="bg-gradient-to-b w-full overflow-hidden from-green-950 from-[30%] via-green-800 to-green-700">
         <div className="grid items-center md:grid-cols-5 px-3 py-20 sm:pt-28 mx-auto">
           <div className="space-y-3 md:pl-12 text-white md:space-y-7 col-span-2 py-16">
             <div className="text-2xl font-bold">Testimony</div>
