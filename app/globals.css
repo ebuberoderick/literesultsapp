@@ -30,3 +30,59 @@ body {
   flex: 0 0 100%;
   min-width: 0;
 }
+
+
+
+.gallery7 {
+  padding: 10px;
+  display: flex;
+  align-items: end;
+  background-image: url("../public/group-people-working-with-gadgets.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery8 {
+  padding: 10px;
+  display: flex;
+  align-items: end;
+  background-image: url("../public/1000_F_337089218_La1uoHy7ykH1fVM4CvPlrl4a2ut2bBrm.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery9 {
+  padding: 10px;
+  display: flex;
+  align-items: end;
+  background-image: url("../public/1000_F_337089218_La1uoHy7ykH1fVM4CvPlrl4a2ut2bBrm.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery10 {
+  padding: 10px;
+  display: flex;
+  align-items: end;
+  background-image: url("../public/1000_F_327805074_PGHPQhTsJTFQMmQquJga3mqpLYoNU5Gk.jpg");
+  background-position:  center center;
+  background-size: cover;
+}
+
+.gallery11 {
+  padding: 10px;
+  display: flex;
+  align-items: end;
+  background-image: url("../public/young-woman-showing-her-friend-something-from-notebook_23-2149265818.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery12 {
+  padding: 10px;
+  display: flex;
+  align-items: end;
+  background-image: url("../public/victorious-students-posing-meadow_23-2147664351.jpg");
+  background-position: center;
+  background-size: cover;
+}

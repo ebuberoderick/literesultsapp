@@ -3,6 +3,12 @@ import Image from 'next/image'
 import React, { useEffect } from 'react'
 import { FaFacebookF, FaInstagram, FaPlay } from "react-icons/fa6";
 import img from "@/public/banImg.png"
+import digitalM from "@/public/digitalM.jpeg"
+import about from "@/public/about.jpg"
+import why1 from "@/public/african-woman-pointing-laptop-studying-with-colleague-university_242111-40133.jpg"
+import why2 from "@/public/study-group-african-people_23-2149156376.jpg"
+import why3 from "@/public/2149891363.jpg"
+import why4 from "@/public/1625.jpg"
 import { TfiAngleLeft, TfiAngleRight } from "react-icons/tfi";
 import { FaLinkedin } from "react-icons/fa";
 import atlas from "@/public/Asset-2.svg"
@@ -19,7 +25,7 @@ function Page() {
   }, [emblaApi])
 
   return (
-    <div className='select-none'>
+    <div className='select-none scroll-smooth'>
       <Navbar />
       {/* Header */}
       <div className="bg-green-950 ">
@@ -69,7 +75,9 @@ function Page() {
           <div className="h-full relative">
             <div className="bg-black h-[60%] w-[50%] absolute -top-9"></div>
             <div className="bg-black h-[60%] w-[50%] absolute -bottom-7 md:bottom-20 right-3"></div>
-            <div className="h-[80%] w-[80%] mx-auto min-h-96 relative bg-green-500"></div>
+            <div className="h-[80%] w-[80%] mx-auto min-h-96 relative" style={{ backgroundImage: about }}>
+              <Image src={about} draggable={false} alt='about us' className='h-full w-auto' />
+            </div>
           </div>
           <div className="space-y-3 md:space-y-7 py-16">
             <div className="font-extrabold text-white text-2xl xl:space-y-4 xl:text-5xl">
@@ -115,7 +123,7 @@ function Page() {
         <div className="space-y-6 z-40 md:space-y-24 md:space-x-3 grid md:grid-cols-2 xl:grid-cols-1 relative xl:top-16">
           <div data-aos="fade-left" className="xl:w-[276px] bg-green-300 overflow-hidden w-full relative rounded-3xl mx-auto h-[350px] gallery7">
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
-              <div className="font-semibold sm:text-xl">Speed Dating</div>
+              <div className="font-semibold sm:text-xl">Web Development</div>
               <div className="text-xs">
                 Spark new connections in our fun, relaxed speed dating sessions designed to bring singles together.
               </div>
@@ -126,7 +134,7 @@ function Page() {
           </div>
           <div data-aos="fade-left" className="xl:w-[376px] bg-green-300 overflow-hidden w-full relative xl:left-12 rounded-3xl mx-auto h-[200px] gallery8">
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
-              <div className="font-semibold sm:text-xl">Waterparks and Palmwine Spots</div>
+              <div className="font-semibold sm:text-xl">Mobile Development</div>
               <div className="text-xs">
                 Leisure areas for relaxation and socializing.
               </div>
@@ -136,7 +144,7 @@ function Page() {
         <div className="flex flex-col items-center md:flex-row xl:flex-col xl:items-end justify-center lg:gap-6">
           <div data-aos="fade-up" className="h-[200px] bg-green-300 overflow-hidden w-full xl:w-[300px] rounded-3xl gallery9">
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
-              <div className="font-semibold sm:text-xl">Live Music & Entertainment</div>
+              <div className="font-semibold sm:text-xl">Digital Marketing</div>
               <div className="text-xs">
                 Groove to the beats of top DJs, live bands, and surprise musical performances that will keep you dancing all night.
               </div>
@@ -170,7 +178,7 @@ function Page() {
           </div>
           <div data-aos="fade-down" className="h-[200px] bg-green-300 overflow-hidden w-full xl:w-[440px] rounded-3xl mt-14 gallery10">
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
-              <div className="font-semibold sm:text-xl">Cultural Showcase</div>
+              <div className="font-semibold sm:text-xl">UI/UX Design</div>
               <div className="text-xs">
                 Traditional dances, fashion shows, and art exhibitions representing various Nigerian tribes.
               </div>
@@ -180,7 +188,7 @@ function Page() {
         <div className="space-y-6 z-40 md:space-y-24 md:space-x-3 grid md:grid-cols-2 xl:grid-cols-1 relative xl:-top-16">
           <div data-aos="fade-right" className="xl:w-[276px]  bg-green-300 overflow-hidden relative rounded-3xl xl:ml-auto h-[350px] gallery11">
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
-              <div className="font-semibold sm:text-xl">Games and Activities</div>
+              <div className="font-semibold sm:text-xl">Cyber Security</div>
               <div className="text-xs">
                 Dive into interactive games, obstacle courses, waterparks, and palm wine spots that promise endless fun and excitement.
               </div>
@@ -188,7 +196,7 @@ function Page() {
           </div>
           <div data-aos="fade-right" className="xl:w-[276px] bg-green-300 overflow-hidden relative rounded-3xl xl:mx-auto h-[350px] gallery12">
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
-              <div className="font-semibold sm:text-xl">Food and Beverage Stalls</div>
+              <div className="font-semibold sm:text-xl">Project Management</div>
               <div className="text-xs">
                 Offering diverse Nigerian cuisine and drinks from different regions.
               </div>
@@ -314,8 +322,30 @@ function Page() {
             <div className="h-full w-full flex flex-col bg-gray-100">
               <div className="flex-grow"></div>
               <div className="bg-white z-30 p-4">
-                <div className="text-2xl font-bold hover:text-green-800">Anna naomi</div>
-                <div className="text-sm text-gray-400">Project manager</div>
+                <div className="text-2xl font-bold hover:text-green-800">Noble Okechi</div>
+                <div className="text-sm text-gray-400">Web Development</div>
+              </div>
+            </div>
+            <div className="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
+              <div className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                <FaFacebookF />
+              </div>
+              <div className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                <FaInstagram />
+              </div>
+              <div className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
+                <FaLinkedin />
+              </div>
+            </div>
+          </div>
+          <div className="group bg-black cursor-pointer overflow-hidden relative h-96 block">
+            <div className="h-full w-full flex flex-col bg-gray-100">
+              <div className="flex-grow relative z-0">
+                <Image src={digitalM} draggable={false} alt='digital market instructor' />
+              </div>
+              <div className="bg-white z-30 p-4 bottom-0 absolute w-full">
+                <div className="text-2xl font-bold hover:text-green-800">Praises Jonathan</div>
+                <div className="text-sm text-gray-400">Digital Marketing </div>
               </div>
             </div>
             <div className="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
@@ -334,28 +364,8 @@ function Page() {
             <div className="h-full w-full flex flex-col bg-gray-100">
               <div className="flex-grow"></div>
               <div className="bg-white z-30 p-4">
-                <div className="text-2xl font-bold hover:text-green-800">Anna naomi</div>
-                <div className="text-sm text-gray-400">Project manager</div>
-              </div>
-            </div>
-            <div className="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
-              <div className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
-                <FaFacebookF />
-              </div>
-              <div className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
-                <FaInstagram />
-              </div>
-              <div className="border border-black hover:bg-white hover:text-green-800 rounded-full w-7 h-7 flex items-center justify-center">
-                <FaLinkedin />
-              </div>
-            </div>
-          </div>
-          <div className="group bg-black cursor-pointer overflow-hidden relative h-96 block">
-            <div className="h-full w-full flex flex-col bg-gray-100">
-              <div className="flex-grow"></div>
-              <div className="bg-white z-30 p-4">
-                <div className="text-2xl font-bold hover:text-green-800">Anna naomi</div>
-                <div className="text-sm text-gray-400">Project manager</div>
+                <div className="text-2xl font-bold hover:text-green-800">Victor Diala</div>
+                <div className="text-sm text-gray-400">UI/UX Design</div>
               </div>
             </div>
             <div className="p-5 h-full gap-3 flex top-full group-hover: items-center justify-center w-full group-hover:top-0 group-hover:bg-opacity-30 right-0 transition-all duration-300 absolute group-hover:bg-green-800">
@@ -394,10 +404,18 @@ function Page() {
             <div className="bg-black h-[30%] w-[30%] absolute top-[25%] right-[35%]"></div>
             <div className="bg-black h-[30%] w-[30%] absolute -bottom-7 md:bottom-20 left-3"></div>
             <div className="h-[80%] w-[80%] mx-auto min-h-96 relative grid grid-cols-2 gap-5">
-              <div className="bg-green-700 h-full"></div>
-              <div className="bg-green-700 h-full"></div>
-              <div className="bg-green-700 h-full"></div>
-              <div className="bg-green-700 h-full"></div>
+              <div className="bg-green-700 h-full">
+                <Image src={why1} alt='Why Us' className='w-full h-full' />
+              </div>
+              <div className="bg-green-700 h-full">
+                <Image src={why2} alt='Why Us' className='w-full h-full' />
+              </div>
+              <div className="bg-green-700 h-full">
+                <Image src={why3} alt='Why Us' className='w-full h-full' />
+              </div>
+              <div className="bg-green-700 h-full">
+                <Image src={why4} alt='Why Us' className='w-full h-full' />
+              </div>
             </div>
           </div>
           <div className="space-y-3 md:space-y-7 py-16">
