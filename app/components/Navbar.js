@@ -2,6 +2,9 @@
 import Link from 'next/link';
 import React, { useState } from 'react'
 import { CiMenuFries } from "react-icons/ci";
+import logo from "@/public/logo.png"
+import Image from 'next/image';
+
 
 function Navbar() {
     const [openNav, updateSideNav] = useState(false)
@@ -10,9 +13,8 @@ function Navbar() {
             <div className="fixed z-50 px-3 py-2 sm:py-5 w-screen bg-white backdrop-blur-xl bg-opacity-5">
                 <div className="bg-gray-50 bg-opacity-70 items-center flex rounded-lg max-w-3xl py-3 px-4 sm:pr-8 z-50 mx-auto">
                     <div className="">
-                        <Link href="/">
-                            LOGO
-                            {/* <Image draggable={false} src={logo} className="" alt="" /> */}
+                        <Link href="/" draggable={false}>
+                            <Image draggable={false} src={logo} className="h-10 w-24" alt="" />
                         </Link>
                     </div>
                     <div className={`${!openNav && "hidden"} fixed bg-white backdrop-blur-xl bg-opacity-5 h-screen w-screen p-5 sm:p-0 flex sm:block items-center justify-center top-0 right-0 sm:h-auto sm:w-auto sm:relative flex-grow`}>
