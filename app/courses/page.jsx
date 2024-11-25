@@ -71,7 +71,7 @@ function Page() {
                                         <s className='text-xl text-gray-400'>&#8358;100,000</s>
                                     </div>
                                 </div>
-                                <div className="bg-green-800 rounded-full text-center cursor-pointer py-4 px-9 text-white font-bold">Rigster now</div>
+                                <div className="bg-green-800 rounded-full text-center cursor-pointer py-4 px-9 text-white font-bold">Register now</div>
                             </div>
                         </div>
                     ))

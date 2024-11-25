@@ -164,7 +164,7 @@ function Page() {
             </div>
             <div className="flex justify-center">
               <Link href="/courses">
-                <div className="bg-green-800 rounded-full inline-block cursor-pointer py-4 px-9 text-white font-bold">Rigster for a course</div>
+                <div className="bg-green-800 rounded-full inline-block cursor-pointer py-4 px-9 text-white font-bold">Register for a course</div>
               </Link>
             </div>
           </div>

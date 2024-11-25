@@ -24,7 +24,7 @@ function Navbar() {
                             <div className="">
                                 <div>
                                     <Link href="/courses">
-                                        <div className="bg-green-700 rounded-full inline-block cursor-pointer py-3 px-9 text-white font-bold">Rigster for a course</div>
+                                        <div className="bg-green-700 rounded-full inline-block cursor-pointer py-3 px-9 text-white font-bold">Register for a course</div>
                                     </Link>
                                 </div>
                             </div>
