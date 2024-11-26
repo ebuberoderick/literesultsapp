@@ -70,18 +70,18 @@ function Page() {
             value.amount_paid = (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)
             value.amount_balance = (updData.price - ((updData?.price * updData.discount) / 100)) - (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)
             value.discount = updData.discount
+            const config = {
+                reference: "LRS" + (new Date()).getTime().toString(),
+                email: value.email,
+                publicKey: 'pk_test_8a31e17376bd9b0413098cffc7b5a0475a0cf0cc',
+            };
+
+            const initializePayment = usePaystackPayment({
+                ...config,
+                amount: ((updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)) * 100,
+            });
 
             if (typeof window !== "undefined") {
-                const config = {
-                    reference: "LRS" + (new Date()).getTime().toString(),
-                    email: value.email,
-                    publicKey: 'pk_test_8a31e17376bd9b0413098cffc7b5a0475a0cf0cc',
-                };
-
-                const initializePayment = usePaystackPayment({
-                    ...config,
-                    amount: ((updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)) * 100,
-                });
 
 
                 initializePayment({
