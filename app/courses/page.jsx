@@ -64,7 +64,7 @@ function Page() {
             payment_type: '',
         },
 
-        OnSubmit: async (value) => {
+        OnSubmit: (value) => {
             value.course_id = updData.id
             value.amount = updData.price
             value.amount_paid = (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)
