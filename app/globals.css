@@ -33,6 +33,30 @@ body {
 
 
 
+.gallery1 {
+  padding: 10px;
+  display: flex;
+  align-items: end;
+  background-image: url("../public/1000_F_327805074_PGHPQhTsJTFQMmQquJga3mqpLYoNU5Gk.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.gallery2 {
+  padding: 10px;
+  display: flex;
+  align-items: end;
+  background-image: url("../public/group-five-african-college-students-spending-time-together-campus-university-yard-black-afro-friends-sitting-grass-studying-with-laptops.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.gallery3 {
+  padding: 10px;
+  display: flex;
+  align-items: end;
+  background-image: url("../public/group-people-working-with-gadgets.jpg");
+  background-position: center;
+  background-size: cover;
+}
 .gallery7 {
   padding: 10px;
   display: flex;

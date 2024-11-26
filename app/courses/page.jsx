@@ -11,9 +11,9 @@ function Page() {
                 <div className="max-w-7xl grid items-center md:grid-cols-2 gap-5 px-3 mx-auto">
                     <div className="h-full relative">
                         <div className="h-[80%] w-[80%] mx-auto min-h-96 relative grid grid-cols-2 gap-5">
-                            <div className="bg-green-700 rounded-t-full h-48 rounded-bl-full"></div>
-                            <div className="bg-green-700 h-full row-span-2 rounded-full"></div>
-                            <div className="bg-green-700 rounded-b-full rounded-tr-full h-48"></div>
+                            <div className="bg-green-700 gallery1 rounded-t-full h-48 rounded-bl-full"></div>
+                            <div className="bg-green-700 gallery2 h-full row-span-2 rounded-full"></div>
+                            <div className="bg-green-700 gallery3 rounded-b-full rounded-tr-full h-48"></div>
                         </div>
                     </div>
                     <div className="space-y-3 md:space-y-7">
