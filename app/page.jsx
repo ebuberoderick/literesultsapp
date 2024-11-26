@@ -74,8 +74,8 @@ function Page() {
       <div id='about' className="bg-gradient-to-b from-green-950 from-[30%] via-green-800 to-green-700 h-min-screen">
         <div className="pt-12">
           <div className="max-w-xl text-center p-4 text-white mx-auto">
-            <div className="font-semibold text-xl sm:text-3xl">Lorem, ipsum dolor sit amet</div>
-            <div className="text-xs sm:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti quia in modi porro minima nisi iste, fugiat deserunt corrupti voluptas? Animi est repudiandae velit necessitatibus vitae, illo reiciendis omnis.</div>
+            <div className="font-semibold text-xl sm:text-3xl">Learn, Grow, Succeed</div>
+            <div className="text-xs sm:text-base">Take the first step towards your dream career with our expertly designed courses. At Literesults, we make learning accessible, practical, and impactful, so you can achieve your goals with confidence.</div>
           </div>
         </div>
         <div className="max-w-7xl grid min-h-screen items-center md:grid-cols-2 gap-5 px-3 pt-20 sm:pt-28 mx-auto">

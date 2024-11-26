@@ -38,10 +38,10 @@ function Page() {
                     </div>
                     <div className="space-y-3 md:space-y-7">
                         <div className="max-w-md text-2xl xl:space-y-4 xl:text-5xl">
-                            <div className="text-white">Lorem ipsum dolor sit amet.</div>
+                            <div className="text-white">Learn, Grow, Succeed</div>
                         </div>
                         <div className="max-w-md text-xs md:text-sm text-white">
-                            Emphasize unique aspects like expert instructors, real-world projects, and career support. optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
+                            Take the first step towards your dream career with our expertly designed courses. At Literesults, we make learning accessible, practical, and impactful, so you can achieve your goals with confidence.
                         </div>
                         <div className="max-w-lg grid-cols-3 grid gap-7">
                             <div className="bg-white p-4 rounded-lg">
@@ -64,7 +64,7 @@ function Page() {
             <div className="pt-12">
                 <div className="max-w-xl text-center p-4 mx-auto">
                     <div className="font-semibold text-xl sm:text-3xl">Our Courses</div>
-                    <div className="text-xs sm:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti quia in modi porro minima nisi iste, fugiat deserunt corrupti voluptas? Animi est repudiandae velit necessitatibus vitae, illo reiciendis omnis.</div>
+                    <div className="text-xs sm:text-base"> Literesults provides a wide variety of professionally created courses that are suited to learners at any level of their technological journey.</div>
                 </div>
             </div>
             <div className="max-w-7xl mx-auto p-4 py-24 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -74,7 +74,7 @@ function Page() {
                             <div className="h-52 rounded-lg bg-gray-200">
                                 <Image alt={data.title} src={data.image} width={100} height={100} className='h-full w-full' />
                             </div>
-                            <div className="absolute right-0 -top-3 bg-red-500 px-5 py-1 rounded-bl-xl text-xs text-white">{data.discount}%</div>
+                            {data?.discount > 0 && <div className="absolute right-0 -top-3 bg-red-500 px-5 py-1 rounded-bl-xl text-xs text-white">{data.discount}%</div>}
                             <div className=" space-y-4">
                                 <div className="text-center">
                                     <div className="font-bold text-xl">{data.title}</div>
