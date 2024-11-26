@@ -1,12 +1,33 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import axios from 'axios';
+import Modal from '../components/Modal';
 
 function Page() {
+
+    const [updData, setUpdateData] = useState({})
+
+    const fetchcourses = async () => {
+        axios.post('https://skillapp.literesults.net/api/fetch_courses')
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
+
+    useEffect(() => {
+        fetchcourses()
+    }, [])
+
+
     return (
         <div>
             <Navbar />
-
             <div className="bg-green-800 py-14 pt-36">
                 <div className="max-w-7xl grid items-center md:grid-cols-2 gap-5 px-3 mx-auto">
                     <div className="h-full relative">
@@ -71,12 +92,15 @@ function Page() {
                                         <s className='text-xl text-gray-400'>&#8358;100,000</s>
                                     </div>
                                 </div>
-                                <div className="bg-green-800 rounded-full text-center cursor-pointer py-4 px-9 text-white font-bold">Register now</div>
+                                <div onClick={() => setUpdateData({ amount: 3000 })} className="bg-green-800 rounded-full text-center cursor-pointer py-4 px-9 text-white font-bold">Register now</div>
                             </div>
                         </div>
                     ))
                 }
             </div>
+            <Modal size={"md"} closeModal={() => setUpdateData({})} isOpen={Object.keys(updData).length > 0}>
+                <div onClick={() => setUpdateData({})} className="bg-green-800 rounded-full text-center cursor-pointer py-4 px-9 text-white font-bold">Register now</div>
+            </Modal>
             <Footer />
         </div>
     )
