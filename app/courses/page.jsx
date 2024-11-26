@@ -7,18 +7,16 @@ import Modal from '../components/Modal';
 
 function Page() {
 
+    const [courseList, setCourseList] = useState([])
     const [updData, setUpdateData] = useState({})
 
     const fetchcourses = async () => {
-        axios.post('https://skillapp.literesults.net/api/fetch_courses')
+        await axios.get('https://skillapp.literesults.net/api/fetch_courses')
             .then(function (response) {
-                console.log(response);
+                setCourseList(response.data.data[0]);
+                console.log(response.data.data[0]);
             })
-            .catch(function (error) {
-                console.log(error);
-            });
     }
-
 
     useEffect(() => {
         fetchcourses()
@@ -26,7 +24,7 @@ function Page() {
 
 
     return (
-        <div>
+        <div className='select-none scroll-smooth'>
             <Navbar />
             <div className="bg-green-800 py-14 pt-36">
                 <div className="max-w-7xl grid items-center md:grid-cols-2 gap-5 px-3 mx-auto">
@@ -70,7 +68,7 @@ function Page() {
             </div>
             <div className="max-w-7xl mx-auto p-4 py-24 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {
-                    ["", "", "", "", "", ""].map((_, i) => (
+                    courseList.map((_, i) => (
                         <div key={i} className="border border-gray-50 space-y-3 hover:shadow-lg hover:scale-105 transition-all duration-300 rounded-lg p-3">
                             <div className="h-52 rounded-lg bg-gray-200"></div>
                             <div className=" space-y-4">
