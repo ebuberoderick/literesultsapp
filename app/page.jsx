@@ -223,7 +223,7 @@ function Page() {
                   <div className="embla__slide">
                     <div className="space-y-3">
                       <div className="text-sm md:text-base">
-                        Enrolling in Literesults was the best decision for my career. The web development course gave me the skills and confidence to land my dream job in tech!"
+                        Enrolling in Literesults was the best decision for my career. The web development course gave me the skills and confidence to land my dream job in tech!
                       </div>
                       <div className="flex items-center gap-1">
                         <div className="w-12 h-12 bg-green-500 rounded-full"></div>
