@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import axios from 'axios';
 import Modal from '../components/Modal';
+import Image from 'next/image';
 
 function Page() {
 
@@ -68,13 +69,16 @@ function Page() {
             </div>
             <div className="max-w-7xl mx-auto p-4 py-24 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {
-                    courseList.map((_, i) => (
-                        <div key={i} className="border border-gray-50 space-y-3 hover:shadow-lg hover:scale-105 transition-all duration-300 rounded-lg p-3">
-                            <div className="h-52 rounded-lg bg-gray-200"></div>
+                    courseList.map((data, i) => (
+                        <div key={i} className="border relative border-gray-50 space-y-3 hover:shadow-lg hover:scale-105 transition-all duration-300 rounded-lg p-3">
+                            <div className="h-52 rounded-lg bg-gray-200">
+                                <Image alt={data.title} src={data.image} width={100} height={100} className='h-full w-full' />
+                            </div>
+                            <div className="absolute right-0 -top-3 bg-red-500 px-5 py-1 rounded-bl-xl text-xs text-white">{data.discount}%</div>
                             <div className=" space-y-4">
                                 <div className="text-center">
-                                    <div className="font-bold text-xl">Web Development</div>
-                                    <div className="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, autem magni. Doloremque, provident! Aperiam at veritatis, </div>
+                                    <div className="font-bold text-xl">{data.title}</div>
+                                    <div className="text-sm">{data.description}</div>
                                 </div>
                                 <div className=" space-y-3">
                                     <ul className="list-disc list-inside ">
@@ -85,12 +89,15 @@ function Page() {
                                         <li>Tailwind Css</li>
                                         <li>Bootstrap</li>
                                     </ul>
-                                    <div className="space-x-3">
-                                        <span className='font-bold text-3xl'>&#8358;70,000</span>
-                                        <s className='text-xl text-gray-400'>&#8358;100,000</s>
+                                    <div className="space-x-3 relative">
+                                        <span className='font-bold text-3xl'>&#8358;{Number(data.price - ((data?.price * data.discount) / 100)).toLocaleString("en-US")}</span>
+                                        {
+                                            data?.discount > 0 && <s className='text-xl text-gray-400'>&#8358;{Number(data?.price).toLocaleString("en-US")}</s>
+                                        }
+                                        <div className="absolute right-3 top-2 bg-green-800 bg-opacity-15 px-5 py-1 rounded-full text-xs text-green-700">{data.duration} months</div>
                                     </div>
                                 </div>
-                                <div onClick={() => setUpdateData({ amount: 3000 })} className="bg-green-800 rounded-full text-center cursor-pointer py-4 px-9 text-white font-bold">Register now</div>
+                                <div onClick={() => setUpdateData(data)} className="bg-green-800 rounded-full text-center cursor-pointer py-4 px-9 text-white font-bold">Register now</div>
                             </div>
                         </div>
                     ))
