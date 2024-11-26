@@ -96,7 +96,7 @@ function Page() {
               Literesults is a forward-thinking platform dedicated to transforming lives through education and skill development. With a focus on quality, accessibility, and innovation, we give learners the tools they need to succeed in their careers and stay ahead in the constantly changing tech landscape.
             </div>
             <div data-aos="fade-up" className="max-w-lg text-xs md:text-sm text-white">
-              Whether you're starting from scratch or looking to expand your expertise, Literesults is here to guide you every step of the way. Our mission is to bridge the gap between ambition and achievement by offering expertly curated courses designed to meet the demands of the modern workforce.
+              Whether you&apos;re starting from scratch or looking to expand your expertise, Literesults is here to guide you every step of the way. Our mission is to bridge the gap between ambition and achievement by offering expertly curated courses designed to meet the demands of the modern workforce.
             </div>
             <div className="">
               <div className="flex gap-4">
@@ -399,7 +399,7 @@ function Page() {
               <div className="">Why Us?</div>
             </div>
             <div className="max-w-lg text-xs md:text-sm ">
-              At Literesults, we are committed to providing an exceptional learning experience that sets you up for long-term success. Here’s why you should choose us:
+              At Literesults, we are committed to providing an exceptional learning experience that sets you up for long-term success. Here&apos;s why you should choose us:
             </div>
             <ul className="max-w-lg grid grid-cols-2 list-disc list-inside text-xs md:text-sm">
               <li>Expert-Led Courses</li>
