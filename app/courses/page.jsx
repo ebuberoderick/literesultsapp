@@ -11,6 +11,7 @@ import { PaystackButton, usePaystackPayment } from 'react-paystack';
 
 function Page() {
 
+    const initializePayment = usePaystackPayment();
     const [courseList, setCourseList] = useState([])
     const [updData, setUpdateData] = useState({})
     const [pt, setPT] = useState("")
@@ -70,19 +71,33 @@ function Page() {
             value.amount_paid = (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)
             value.amount_balance = (updData.price - ((updData?.price * updData.discount) / 100)) - (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)
             value.discount = updData.discount
-            const config = {
-                reference: "LRS" + (new Date()).getTime().toString(),
-                email: value.email,
-                publicKey: 'pk_test_8a31e17376bd9b0413098cffc7b5a0475a0cf0cc',
-            };
-
-            const initializePayment = usePaystackPayment({
-                ...config,
-                amount: ((updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)) * 100,
-            });
 
             if (typeof window !== "undefined") {
+                const config = {
+                    reference: "LRS" + (new Date()).getTime().toString(),
+                    email: value.email,
+                    publicKey: 'pk_test_8a31e17376bd9b0413098cffc7b5a0475a0cf0cc',
+                };
 
+
+                //             {
+                //                 ...config,
+                //     amount: ((updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)) * 100,
+                // }
+                // initializePayment({
+                //     onSuccess: async () => {
+                //         axios.post('https://skillapp.literesults.net/api/save_course_order', value)
+                //             .then(function (response) {
+                //                 console.log(response);
+                //             })
+                //             .catch(function (error) {
+                //                 console.log(error);
+                //             });
+                //     },
+                //     onClose: () => {
+                //         console.log("Your payment was unsuccessful, try again later!");
+                //     }
+                // })
 
                 initializePayment({
                     onSuccess: async () => {
@@ -96,6 +111,10 @@ function Page() {
                     },
                     onClose: () => {
                         console.log("Your payment was unsuccessful, try again later!");
+                    },
+                    config: {
+                        ...config,
+                        amount: ((updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)) * 100,
                     }
                 })
             }
