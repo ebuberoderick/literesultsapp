@@ -54,7 +54,7 @@ function UseFormHandler(props) {
         if (err.length <= 0) {
             setProccessing(true)
             await formInfo()
-            await props.onSubmit(value)
+            await props.OnSubmit(value)
             setProccessing(false)
             return;
         }
