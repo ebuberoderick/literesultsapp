@@ -5,23 +5,78 @@ import Navbar from '../components/Navbar'
 import axios from 'axios';
 import Modal from '../components/Modal';
 import Image from 'next/image';
+import UseFormHandler from '../useFormHandler';
+import AppInput from '../components/AppInput';
 
 function Page() {
 
     const [courseList, setCourseList] = useState([])
     const [updData, setUpdateData] = useState({})
+    const [pt, setPT] = useState("")
 
     const fetchcourses = async () => {
         await axios.get('https://skillapp.literesults.net/api/fetch_courses')
             .then(function (response) {
                 setCourseList(response.data.data[0]);
-                console.log(response.data.data[0]);
             })
     }
 
     useEffect(() => {
         fetchcourses()
     }, [])
+
+    const reset = () => {
+        setPT("")
+        formdata.value.course_id = ""
+        formdata.value.name = ""
+        formdata.value.phone = ""
+        formdata.value.email = ""
+        formdata.value.amount = ""
+        formdata.value.amount_paid = ""
+        formdata.value.amount_balance = ""
+        formdata.value.discount = ""
+        formdata.value.class_type = ""
+        formdata.value.payment_type = ""
+    }
+
+    const formdata = UseFormHandler({
+        required: {
+            name: 'Please Enter Fullname',
+            phone: 'Please Enter Phone',
+            email: 'Please Enter Email',
+            class_type: 'Please Choose learning place',
+            payment_type: 'Please Select Payment Plan',
+        },
+        initialValues: {
+            course_id: '',
+            name: '',
+            phone: '',
+            email: '',
+            amount: '',
+            amount_paid: '',
+            amount_balance: '',
+            discount: '',
+            class_type: '',
+            payment_type: '',
+        },
+
+        onSubmit: async (value) => {
+            value.course_id = updData.id
+            value.amount = updData.price
+            value.amount_paid = (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)
+            value.amount_balance = (updData.price - ((updData?.price * updData.discount) / 100)) - (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)
+            value.discount = updData.discount
+
+
+            axios.post('https://skillapp.literesults.net/api/save_course_order', value)
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+    })
 
 
     return (
@@ -99,8 +154,50 @@ function Page() {
                     ))
                 }
             </div>
-            <Modal size={"md"} closeModal={() => setUpdateData({})} isOpen={Object.keys(updData).length > 0}>
-                <div onClick={() => setUpdateData({})} className="bg-green-800 rounded-full text-center cursor-pointer py-4 px-9 text-white font-bold">Register now</div>
+            <Modal size={"md"} closeModal={() => { setUpdateData({}); reset() }} isOpen={Object.keys(updData).length > 0}>
+                <div className="space-y-4">
+                    <div className="">
+                        <div className="text-xl font-bold">{updData.title}</div>
+                    </div>
+                    <div className="">
+                        <AppInput onChange={(e) => formdata.value.name = e.target.value} required label='Enter Fullname' />
+                        <div className="text-xs text-red-600">{formdata?.error?.name}</div>
+                    </div>
+                    <div className="">
+                        <AppInput onChange={(e) => formdata.value.phone = e.target.value} required label='Enter phone' />
+                        <div className="text-xs text-red-600">{formdata?.error?.phone}</div>
+                    </div>
+                    <div className="">
+                        <AppInput onChange={(e) => formdata.value.email = e.target.value} required label='Enter email' />
+                        <div className="text-xs text-red-600">{formdata?.error?.email}</div>
+                    </div>
+                    <div className="">
+                        <div className="">Prefered Learning Location</div>
+                        <div className="flex gap-3">
+                            <AppInput onChange={() => formdata.value.class_type = "online"} type="radio" name="type" label="Online" required />
+                            <AppInput onChange={() => formdata.value.class_type = "physical"} type="radio" name="type" label="Physical" required />
+                        </div>
+                        <div className="text-xs text-red-600">{formdata?.error?.class_type}</div>
+                    </div>
+                    <div className="">
+                        <div className="">Payment Plan</div>
+                        <div className="flex gap-3">
+                            <AppInput onChange={() => { formdata.value.payment_type = "full"; setPT("full") }} type="radio" name="payment" label="Full" required />
+                            <AppInput onChange={() => { formdata.value.payment_type = "half"; setPT("half") }} type="radio" name="payment" label="Half" required />
+                        </div>
+                        <div className="text-xs text-red-600">{formdata?.error?.payment_type}</div>
+                    </div>
+                    {
+                        pt !== "" && (
+                            <div className="">
+                                <div className="">Amount To Pay</div>
+                                <div className="text-xl font-bold">&#8358;{Number((updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)).toLocaleString("en-US")}</div>
+                            </div>
+                        )
+                    }
+
+                    <div onClick={() => formdata.submit()} className="bg-green-800 rounded-full text-center cursor-pointer py-4 px-9 text-white font-bold">Pay now</div>
+                </div>
             </Modal>
             <Footer />
         </div>
