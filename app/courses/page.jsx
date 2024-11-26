@@ -82,12 +82,8 @@ function Page() {
                                 </div>
                                 <div className=" space-y-3">
                                     <ul className="list-disc list-inside ">
-                                        <li>Html</li>
-                                        <li>CSS</li>
-                                        <li>Javascript</li>
-                                        <li>Jquery</li>
-                                        <li>Tailwind Css</li>
-                                        <li>Bootstrap</li>
+                                        <li>Certificate on Completion</li>
+                                        <li>Life time mentorship</li>
                                     </ul>
                                     <div className="space-x-3 relative">
                                         <span className='font-bold text-3xl'>&#8358;{Number(data.price - ((data?.price * data.discount) / 100)).toLocaleString("en-US")}</span>
