@@ -17,10 +17,15 @@ import Autoplay from 'embla-carousel-autoplay'
 import Footer from './components/Footer';
 import Link from 'next/link';
 import Navbar from './components/Navbar';
+import 'aos/dist/aos.css';
+import Aos from 'aos';
 
 function Page() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, direction: "ltr", dragFree: false }, [Autoplay()])
   useEffect(() => {
+    Aos.init({
+      duration: 1000, 
+    });
     if (emblaApi) { console.log(emblaApi.slideNodes()) }
   }, [emblaApi])
 
@@ -84,15 +89,15 @@ function Page() {
               <div className="">Who are we</div>
               <div className="">and What do we Do</div>
             </div>
-            <div className="max-w-lg text-xs md:text-sm text-white">
+            <div data-aos="fade-up" className="max-w-lg text-xs md:text-sm text-white">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, non nisi? Officia architecto magni beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, non nisi? Officia architecto magni beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
             </div>
-            <div className="max-w-lg text-xs md:text-sm text-white">
+            <div data-aos="fade-up" className="max-w-lg text-xs md:text-sm text-white">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, non nisi? Officia architecto magni beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
               beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
             </div>
-            <div className="max-w-lg text-xs md:text-sm text-white">
+            <div data-aos="fade-up" className="max-w-lg text-xs md:text-sm text-white">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, non nisi? Officia architecto magni beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
             </div>
             <div className="">
@@ -205,15 +210,12 @@ function Page() {
         </div>
       </div>
 
-      {/* <div className=""></div> */}
-
-
 
       <div id='testimonials' className="bg-gradient-to-b w-full overflow-hidden from-green-950 from-[30%] via-green-800 to-green-700">
         <div className="grid items-center md:grid-cols-5 px-3 py-20 sm:pt-28 mx-auto">
           <div className="space-y-3 md:pl-12 text-white md:space-y-7 col-span-2 py-16">
             <div className="text-2xl font-bold">Testimony</div>
-            <div className=" text-5xl">
+            <div className="text-3xl md:text-5xl">
               <div className="">What Our <span className='text-[#f9820b]'>Students</span></div>
               <div className="">Have to say</div>
             </div>
@@ -222,7 +224,7 @@ function Page() {
                 <div className="embla__container">
                   <div className="embla__slide">
                     <div className="space-y-3">
-                      <div className="">
+                      <div className="text-sm md:text-base">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nulla reiciendis dolore rem? Consequatur consequuntur, quaerat libero, quam provident minima a, possimus dolore aut sunt eos explicabo corrupti ut assumenda!
                       </div>
                       <div className="flex items-center gap-1">
@@ -318,7 +320,7 @@ function Page() {
           </div>
         </div>
         <div className="px-6 grid md:justify-center md:grid-cols-3 max-w-5xl gap-5 mx-auto">
-          <div className="group bg-black cursor-pointer overflow-hidden relative h-96 block">
+          <div data-aos="fade-up" className="group bg-black cursor-pointer overflow-hidden relative h-96 block">
             <div className="h-full w-full flex flex-col bg-gray-100">
               <div className="flex-grow"></div>
               <div className="bg-white z-30 p-4">
@@ -338,7 +340,7 @@ function Page() {
               </div>
             </div>
           </div>
-          <div className="group bg-black cursor-pointer overflow-hidden relative h-96 block">
+          <div data-aos="fade-up" className="group bg-black cursor-pointer overflow-hidden relative h-96 block">
             <div className="h-full w-full flex flex-col bg-gray-100">
               <div className="flex-grow relative z-0">
                 <Image src={digitalM} draggable={false} alt='digital market instructor' />
@@ -360,7 +362,7 @@ function Page() {
               </div>
             </div>
           </div>
-          <div className="group bg-black cursor-pointer overflow-hidden relative h-96 block">
+          <div data-aos="fade-up" className="group bg-black cursor-pointer overflow-hidden relative h-96 block">
             <div className="h-full w-full flex flex-col bg-gray-100">
               <div className="flex-grow"></div>
               <div className="bg-white z-30 p-4">
