@@ -7,6 +7,7 @@ import Modal from '../components/Modal';
 import Image from 'next/image';
 import UseFormHandler from '../useFormHandler';
 import AppInput from '../components/AppInput';
+import { PaystackButton, usePaystackPayment } from 'react-paystack';
 
 function Page() {
 
@@ -21,9 +22,12 @@ function Page() {
             })
     }
 
+
+
     useEffect(() => {
         fetchcourses()
     }, [])
+
 
     const reset = () => {
         setPT("")
@@ -67,16 +71,34 @@ function Page() {
             value.amount_balance = (updData.price - ((updData?.price * updData.discount) / 100)) - (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)
             value.discount = updData.discount
 
-
-            axios.post('https://skillapp.literesults.net/api/save_course_order', value)
-                .then(function (response) {
-                    console.log(response);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
+            initializePayment({
+                onSuccess: async () => {
+                    axios.post('https://skillapp.literesults.net/api/save_course_order', value)
+                        .then(function (response) {
+                            console.log(response);
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                },
+                onClose: () => {
+                    console.log("Your payment was unsuccessful, try again later!");
+                }
+            })
         }
     })
+
+    const config = {
+        reference: "LRS" + (new Date()).getTime().toString(),
+        email: formdata.value.email,
+        publicKey: 'pk_test_8a31e17376bd9b0413098cffc7b5a0475a0cf0cc',
+    };
+
+    const initializePayment = usePaystackPayment({
+        ...config,
+        amount: ((updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)) * 100,
+    });
+
 
 
     return (
