@@ -14,9 +14,9 @@ function Footer() {
                 <div className="lg:h-96 bg-green-800 rounded-2xl relative overflow-hidden lg:overflow-visible">
                     <div className="h-full w-full p-4 flex items-center justify-center lg:justify-end rounded-2xl lg:relative overflow-hidden bg-green-800">
                         <div className="z-10 space-y-4 max-w-lg text-center lg:text-right">
-                            <div className="text-3xl font-bold text-white">Lorem ipsum dolor sit.</div>
+                            <div className="text-3xl font-bold text-white">Your Success, Our Mission</div>
                             <div className="text-white">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni adipisci ipsum nisi id veritatis repellendus, quos iureae tenetur quisquam sunt iusto explicabo recusandae.
+                                At Literesults, your growth is our priority. We are dedicated to equipping you with the skills, confidence, and opportunities to thrive in your career and achieve your goals.
                             </div>
                             <div>
                                 <Link href="/courses">

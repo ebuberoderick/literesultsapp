@@ -4,6 +4,8 @@ import React, { useEffect } from 'react'
 import { FaFacebookF, FaInstagram, FaPlay } from "react-icons/fa6";
 import img from "@/public/banImg.png"
 import digitalM from "@/public/digitalM.jpeg"
+import webInst from "@/public/web  instructor.jpeg"
+import UIUX from "@/public/UIUX.jpeg"
 import about from "@/public/about.jpg"
 import why1 from "@/public/african-woman-pointing-laptop-studying-with-colleague-university_242111-40133.jpg"
 import why2 from "@/public/study-group-african-people_23-2149156376.jpg"
@@ -24,7 +26,7 @@ function Page() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, direction: "ltr", dragFree: false }, [Autoplay()])
   useEffect(() => {
     Aos.init({
-      duration: 1000, 
+      duration: 1000,
     });
     if (emblaApi) { console.log(emblaApi.slideNodes()) }
   }, [emblaApi])
@@ -42,7 +44,7 @@ function Page() {
               <div className="">Lite<span className="bg-green-500 text-yellow-200">results</span> Service</div>
             </div>
             <div className="max-w-lg text-xs md:text-sm text-white">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, non nisi? Officia architecto magni beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
+              Start creating the career you deserve today by unlocking your potential with Literesults, where your tech success is paved with excellent courses alongside expert guidance.
             </div>
             <div className="flex gap-4">
               <Link href="/courses">
@@ -89,16 +91,12 @@ function Page() {
               <div className="">Who are we</div>
               <div className="">and What do we Do</div>
             </div>
+
             <div data-aos="fade-up" className="max-w-lg text-xs md:text-sm text-white">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, non nisi? Officia architecto magni beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, non nisi? Officia architecto magni beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
+              Literesults is a forward-thinking platform dedicated to transforming lives through education and skill development. With a focus on quality, accessibility, and innovation, we give learners the tools they need to succeed in their careers and stay ahead in the constantly changing tech landscape.
             </div>
             <div data-aos="fade-up" className="max-w-lg text-xs md:text-sm text-white">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, non nisi? Officia architecto magni beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
-              beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
-            </div>
-            <div data-aos="fade-up" className="max-w-lg text-xs md:text-sm text-white">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, non nisi? Officia architecto magni beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
+              Whether you're starting from scratch or looking to expand your expertise, Literesults is here to guide you every step of the way. Our mission is to bridge the gap between ambition and achievement by offering expertly curated courses designed to meet the demands of the modern workforce.
             </div>
             <div className="">
               <div className="flex gap-4">
@@ -119,7 +117,7 @@ function Page() {
       <div className="pt-12">
         <div className="max-w-xl text-center p-4 mx-auto">
           <div className="font-semibold text-xl sm:text-3xl">Our Courses</div>
-          <div className="text-xs sm:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti quia in modi porro minima nisi iste, fugiat deserunt corrupti voluptas? Animi est repudiandae velit necessitatibus vitae, illo reiciendis omnis.</div>
+          <div className="text-xs sm:text-base"> Literesults provides a wide variety of professionally created courses that are suited to learners at any level of their technological journey.</div>
         </div>
       </div>
 
@@ -130,7 +128,7 @@ function Page() {
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
               <div className="font-semibold sm:text-xl">Web Development</div>
               <div className="text-xs">
-                Spark new connections in our fun, relaxed speed dating sessions designed to bring singles together.
+                Master the art of building modern, responsive websites with our comprehensive web development courses.
               </div>
             </div>
             <div className="w-12 h-12 cursor-pointer bg-white rounded-full absolute top-5 right-5 flex items-center justify-center">
@@ -141,7 +139,7 @@ function Page() {
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
               <div className="font-semibold sm:text-xl">Mobile Development</div>
               <div className="text-xs">
-                Leisure areas for relaxation and socializing.
+                Learn to create innovative, user-friendly apps with our expert-led mobile development courses.
               </div>
             </div>
           </div>
@@ -151,7 +149,7 @@ function Page() {
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
               <div className="font-semibold sm:text-xl">Digital Marketing</div>
               <div className="text-xs">
-                Groove to the beats of top DJs, live bands, and surprise musical performances that will keep you dancing all night.
+                Boost your expertise in online strategies with our advanced digital marketing courses designed for success.
               </div>
             </div>
           </div>
@@ -185,7 +183,7 @@ function Page() {
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
               <div className="font-semibold sm:text-xl">UI/UX Design</div>
               <div className="text-xs">
-                Traditional dances, fashion shows, and art exhibitions representing various Nigerian tribes.
+                Transform ideas into seamless user experiences with our creative and practical UI/UX design courses.
               </div>
             </div>
           </div>
@@ -195,7 +193,7 @@ function Page() {
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
               <div className="font-semibold sm:text-xl">Cyber Security</div>
               <div className="text-xs">
-                Dive into interactive games, obstacle courses, waterparks, and palm wine spots that promise endless fun and excitement.
+                With our in-depth cybersecurity courses, designed to provide you with necessary protective skills, secure the digital environment.
               </div>
             </div>
           </div>
@@ -203,7 +201,7 @@ function Page() {
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
               <div className="font-semibold sm:text-xl">Project Management</div>
               <div className="text-xs">
-                Offering diverse Nigerian cuisine and drinks from different regions.
+                Gain the skills to lead and deliver successful projects with our dynamic project management courses.
               </div>
             </div>
           </div>
@@ -225,13 +223,13 @@ function Page() {
                   <div className="embla__slide">
                     <div className="space-y-3">
                       <div className="text-sm md:text-base">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nulla reiciendis dolore rem? Consequatur consequuntur, quaerat libero, quam provident minima a, possimus dolore aut sunt eos explicabo corrupti ut assumenda!
+                        Enrolling in Literesults was the best decision for my career. The web development course gave me the skills and confidence to land my dream job in tech!"
                       </div>
                       <div className="flex items-center gap-1">
                         <div className="w-12 h-12 bg-green-500 rounded-full"></div>
                         <div className="-space-y-1">
-                          <div className="font-bold">John Doe</div>
-                          <div className="text-sm">Mobile Dev student</div>
+                          <div className="font-bold">Pascal</div>
+                          <div className="text-sm">Web development</div>
                         </div>
                       </div>
                     </div>
@@ -239,13 +237,13 @@ function Page() {
                   <div className="embla__slide">
                     <div className="space-y-3">
                       <div className="">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nulla reiciendis dolore rem? Consequatur consequuntur, quaerat libero, quam provident minima a, possimus dolore aut sunt eos explicabo corrupti ut assumenda!
+                        The digital marketing course was a game-changer for me. I not only learned the latest strategies but also how to apply them effectively in real-world scenarios."
                       </div>
                       <div className="flex items-center gap-1">
                         <div className="w-12 h-12 bg-green-500 rounded-full"></div>
                         <div className="-space-y-1">
-                          <div className="font-bold">John Doe</div>
-                          <div className="text-sm">Mobile Dev student</div>
+                          <div className="font-bold">Chiamaka</div>
+                          <div className="text-sm">Digital marketing</div>
                         </div>
                       </div>
                     </div>
@@ -253,41 +251,13 @@ function Page() {
                   <div className="embla__slide">
                     <div className="space-y-3">
                       <div className="">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nulla reiciendis dolore rem? Consequatur consequuntur, quaerat libero, quam provident minima a, possimus dolore aut sunt eos explicabo corrupti ut assumenda!
+                        The mobile development course was fantastic! I went from having no coding experience to creating my first app in just a few months.
                       </div>
                       <div className="flex items-center gap-1">
                         <div className="w-12 h-12 bg-green-500 rounded-full"></div>
                         <div className="-space-y-1">
-                          <div className="font-bold">John Doe</div>
-                          <div className="text-sm">Mobile Dev student</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="embla__slide">
-                    <div className="space-y-3">
-                      <div className="">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nulla reiciendis dolore rem? Consequatur consequuntur, quaerat libero, quam provident minima a, possimus dolore aut sunt eos explicabo corrupti ut assumenda!
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <div className="w-12 h-12 bg-green-500 rounded-full"></div>
-                        <div className="-space-y-1">
-                          <div className="font-bold">John Doe</div>
-                          <div className="text-sm">Mobile Dev student</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="embla__slide">
-                    <div className="space-y-3">
-                      <div className="">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nulla reiciendis dolore rem? Consequatur consequuntur, quaerat libero, quam provident minima a, possimus dolore aut sunt eos explicabo corrupti ut assumenda!
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <div className="w-12 h-12 bg-green-500 rounded-full"></div>
-                        <div className="-space-y-1">
-                          <div className="font-bold">John Doe</div>
-                          <div className="text-sm">Mobile Dev student</div>
+                          <div className="font-bold">Benjamin</div>
+                          <div className="text-sm">Mobile development</div>
                         </div>
                       </div>
                     </div>
@@ -316,14 +286,16 @@ function Page() {
         <div className="pt-12">
           <div className="max-w-xl text-center p-4 mx-auto">
             <div className="font-semibold text-xl text-white sm:text-3xl">Our Instructors</div>
-            <div className="text-xs sm:text-base text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti quia in modi porro minima nisi iste, fugiat deserunt corrupti voluptas? Animi est repudiandae velit necessitatibus vitae, illo reiciendis omnis.</div>
+            <div className="text-xs sm:text-base text-white"> Each instructor is carefully selected for their knowledge, skills, and ability to deliver engaging, real-world lessons that help students succeed.</div>
           </div>
         </div>
         <div className="px-6 grid md:justify-center md:grid-cols-3 max-w-5xl gap-5 mx-auto">
           <div data-aos="fade-up" className="group bg-black cursor-pointer overflow-hidden relative h-96 block">
             <div className="h-full w-full flex flex-col bg-gray-100">
-              <div className="flex-grow"></div>
-              <div className="bg-white z-30 p-4">
+              <div className="flex-grow relative z-0">
+                <Image src={webInst} draggable={false} alt='digital market instructor' />
+              </div>
+              <div className="bg-white z-30 p-4 bottom-0 absolute w-full">
                 <div className="text-2xl font-bold hover:text-green-800">Noble Okechi</div>
                 <div className="text-sm text-gray-400">Web Development</div>
               </div>
@@ -364,8 +336,10 @@ function Page() {
           </div>
           <div data-aos="fade-up" className="group bg-black cursor-pointer overflow-hidden relative h-96 block">
             <div className="h-full w-full flex flex-col bg-gray-100">
-              <div className="flex-grow"></div>
-              <div className="bg-white z-30 p-4">
+              <div className="flex-grow relative z-0">
+                <Image src={UIUX} draggable={false} alt='digital market instructor' />
+              </div>
+              <div className="bg-white z-30 p-4 bottom-0 absolute w-full">
                 <div className="text-2xl font-bold hover:text-green-800">Victor Diala</div>
                 <div className="text-sm text-gray-400">UI/UX Design</div>
               </div>
@@ -425,19 +399,19 @@ function Page() {
               <div className="">Why Us?</div>
             </div>
             <div className="max-w-lg text-xs md:text-sm ">
-              Emphasize unique aspects like expert instructors, real-world projects, and career support. optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, non nisi? Officia architecto magni beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
+              At Literesults, we are committed to providing an exceptional learning experience that sets you up for long-term success. Here’s why you should choose us:
             </div>
             <ul className="max-w-lg grid grid-cols-2 list-disc list-inside text-xs md:text-sm">
-              <li>web dev</li>
-              <li>mobile app</li>
-              <li>Expert Mentors</li>
+              <li>Expert-Led Courses</li>
+              <li>Comprehensive Curriculum</li>
+              <li>Flexible Learning</li>
               <li>Hands-On Learning,</li>
-              <li>Career Opportunities</li>
-              <li>And many more</li>
+              <li>Hands-On Projects</li>
+              <li>Certification</li>
+              <li>Community & Networking</li>
             </ul>
             <div className="max-w-lg text-xs md:text-sm ">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, non nisi? Officia architecto magni beatae? Totam suscipit blanditiis, ex, optio laudantium quas architecto ut similique quos perspiciatis sed velit debitis.
+              Choose Literesults to unlock your full potential and take the next step in your career with confidence.
             </div>
             <div className="">
               <div className="flex gap-4">
