@@ -237,7 +237,7 @@ function Page() {
                   <div className="embla__slide">
                     <div className="space-y-3">
                       <div className="">
-                        The digital marketing course was a game-changer for me. I not only learned the latest strategies but also how to apply them effectively in real-world scenarios."
+                        The digital marketing course was a game-changer for me. I not only learned the latest strategies but also how to apply them effectively in real-world scenarios.
                       </div>
                       <div className="flex items-center gap-1">
                         <div className="w-12 h-12 bg-green-500 rounded-full"></div>
