@@ -7,7 +7,7 @@ import Modal from '../components/Modal';
 import Image from 'next/image';
 import UseFormHandler from '../useFormHandler';
 import AppInput from '../components/AppInput';
-import { PaystackButton, usePaystackPayment } from 'react-paystack';
+// import { PaystackButton, usePaystackPayment } from 'react-paystack';
 
 function Page() {
 
@@ -24,18 +24,18 @@ function Page() {
     }
 
 
-    const componentProps = {
-        email:"ebuberoderick.code@gmail.com",
-        amount:1000,
-        metadata: {
-            name:"ebube roderick",
-            phone:"08130075358",
-        },
-        publicKey: 'pk_test_8a31e17376bd9b0413098cffc7b5a0475a0cf0cc',
-        text: "Pay Now",
-        onSuccess: () => alert("Thanks for doing business with us! Come back soon!!"),
-        onClose: () => alert("Wait! You need this oil, don't go!!!!"),
-    }
+    // const componentProps = {
+    //     email:"ebuberoderick.code@gmail.com",
+    //     amount:1000,
+    //     metadata: {
+    //         name:"ebube roderick",
+    //         phone:"08130075358",
+    //     },
+    //     publicKey: 'pk_test_8a31e17376bd9b0413098cffc7b5a0475a0cf0cc',
+    //     text: "Pay Now",
+    //     onSuccess: () => alert("Thanks for doing business with us! Come back soon!!"),
+    //     onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+    // }
 
 
     useEffect(() => {
@@ -175,15 +175,15 @@ function Page() {
                                 </div>
                                 <div className=" space-y-3">
                                     <ul className="list-disc list-inside ">
+                                        <li>{data.duration} months</li>
                                         <li>Certificate on Completion</li>
-                                        <li>Life time mentorship</li>
+                                        <li>Free mentorship</li>
                                     </ul>
                                     <div className="space-x-3 relative">
                                         <span className='font-bold text-3xl'>&#8358;{Number(data.price - ((data?.price * data.discount) / 100)).toLocaleString("en-US")}</span>
                                         {
                                             data?.discount > 0 && <s className='text-xl text-gray-400'>&#8358;{Number(data?.price).toLocaleString("en-US")}</s>
                                         }
-                                        <div className="absolute right-3 top-2 bg-green-800 bg-opacity-15 px-5 py-1 rounded-full text-xs text-green-700">{data.duration} months</div>
                                     </div>
                                 </div>
                                 <div onClick={() => setUpdateData(data)} className="bg-green-800 rounded-full text-center cursor-pointer py-4 px-9 text-white font-bold">Register now</div>
@@ -233,7 +233,7 @@ function Page() {
                             </div>
                         )
                     }
-                    <PaystackButton {...componentProps} />
+                    {/* <PaystackButton {...componentProps} /> */}
                     <div onClick={() => formdata.submit()} className="bg-green-800 rounded-full text-center cursor-pointer py-4 px-9 text-white font-bold">Pay now</div>
                 </div>
             </Modal>
