@@ -7,7 +7,7 @@ import Modal from '../components/Modal';
 import Image from 'next/image';
 import UseFormHandler from '../useFormHandler';
 import AppInput from '../components/AppInput';
-// import { PaystackButton, usePaystackPayment } from 'react-paystack';
+import { savedata } from '../services/authService';
 
 function Page() {
 
@@ -22,21 +22,6 @@ function Page() {
                 setCourseList(response.data.data[0]);
             })
     }
-
-
-    // const componentProps = {
-    //     email:"ebuberoderick.code@gmail.com",
-    //     amount:1000,
-    //     metadata: {
-    //         name:"ebube roderick",
-    //         phone:"08130075358",
-    //     },
-    //     publicKey: 'pk_test_8a31e17376bd9b0413098cffc7b5a0475a0cf0cc',
-    //     text: "Pay Now",
-    //     onSuccess: () => alert("Thanks for doing business with us! Come back soon!!"),
-    //     onClose: () => alert("Wait! You need this oil, don't go!!!!"),
-    // }
-
 
     useEffect(() => {
         fetchcourses()
@@ -78,39 +63,18 @@ function Page() {
             payment_type: '',
         },
 
-        OnSubmit: (value) => {
+        OnSubmit: async (value) => {
             value.course_id = updData.id
             value.amount = updData.price
+            value.amount_course = (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)
             value.amount_paid = (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)
             value.amount_balance = (updData.price - ((updData?.price * updData.discount) / 100)) - (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)
             value.discount = updData.discount
 
-            // if (typeof window !== "undefined") {
-            //     const config = {
-            //         reference: "LRS" + (new Date()).getTime().toString(),
-            //         email: value.email,
-            //         publicKey: 'pk_test_8a31e17376bd9b0413098cffc7b5a0475a0cf0cc',
-            //     };
 
-            //     initializePayment({
-            //         onSuccess: async () => {
-            //             axios.post('https://skillapp.literesults.net/api/save_course_order', value)
-            //                 .then(function (response) {
-            //                     console.log(response);
-            //                 })
-            //                 .catch(function (error) {
-            //                     console.log(error);
-            //                 });
-            //         },
-            //         onClose: () => {
-            //             console.log("Your payment was unsuccessful, try again later!");
-            //         },
-            //         config: {
-            //             ...config,
-            //             amount: ((updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "half" ? 2 : 1)) * 100,
-            //         }
-            //     })
-            // }
+            const { data, status } = await savedata(value).catch(err => console.log(err))
+
+            console.log(data, status);
         }
     })
 
