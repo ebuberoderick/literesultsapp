@@ -66,12 +66,12 @@ function Page() {
 
         OnSubmit: async (value) => {
             value.course_id = updData.id
-            value.amount = (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "partial" ? 2 : 1)
+            value.amount = (((updData.price - ((updData?.price * updData.discount) / 100)) * (pt === "half" ? 70 : 100) / 100))
             value.amount_course = updData.price
-            value.amount_paid = (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "partial" ? 2 : 1)
-            value.amount_balance = (updData.price - ((updData?.price * updData.discount) / 100)) - (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "partial" ? 2 : 1)
+            value.amount_paid = (((updData.price - ((updData?.price * updData.discount) / 100)) * (pt === "half" ? 70 : 100) / 100))
+            value.amount_balance = (updData.price - ((updData?.price * updData.discount) / 100)) - (((updData.price - ((updData?.price * updData.discount) / 100)) * (pt === "half" ? 70 : 100) / 100))
             value.discount = updData.discount
-            const { data, status } = await savedata(value).catch(err => {console.log(err);formdata.setProccessing(false)})
+            const { data, status } = await savedata(value).catch(err => { console.log(err); formdata.setProccessing(false) })
 
             if (status) {
                 router.replace(data.data.data.authorization_url)
@@ -186,7 +186,7 @@ function Page() {
                         <div className="">Payment Plan</div>
                         <div className="flex gap-3">
                             <AppInput onChange={() => { formdata.value.payment_type = "full"; setPT("full") }} type="radio" name="payment" label="Full" required />
-                            <AppInput onChange={() => { formdata.value.payment_type = "partial"; setPT("partial") }} type="radio" name="payment" label="partial" required />
+                            <AppInput onChange={() => { formdata.value.payment_type = "half"; setPT("half") }} type="radio" name="payment" label="partial" required />
                         </div>
                         <div className="text-xs text-red-600">{formdata?.error?.payment_type}</div>
                     </div>
@@ -194,7 +194,7 @@ function Page() {
                         pt !== "" && (
                             <div className="">
                                 <div className="">Amount To Pay</div>
-                                <div className="text-xl font-bold">&#8358;{Number((updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "partial" ? 2 : 1)).toLocaleString("en-US")}</div>
+                                <div className="text-xl font-bold">&#8358;{Number(((updData.price - ((updData?.price * updData.discount) / 100)) * (pt === "half" ? 70 : 100) / 100)).toLocaleString("en-US")}</div>
                             </div>
                         )
                     }
