@@ -66,8 +66,8 @@ function Page() {
 
         OnSubmit: async (value) => {
             value.course_id = updData.id
-            value.amount = updData.price
-            value.amount_course = (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "partial" ? 2 : 1)
+            value.amount = (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "partial" ? 2 : 1)
+            value.amount_course = updData.price
             value.amount_paid = (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "partial" ? 2 : 1)
             value.amount_balance = (updData.price - ((updData?.price * updData.discount) / 100)) - (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "partial" ? 2 : 1)
             value.discount = updData.discount
