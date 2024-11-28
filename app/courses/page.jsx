@@ -72,7 +72,6 @@ function Page() {
             value.amount_balance = (updData.price - ((updData?.price * updData.discount) / 100)) - (((updData.price - ((updData?.price * updData.discount) / 100)) * (pt === "half" ? 70 : 100) / 100))
             value.discount = updData.discount
             const { data, status } = await savedata(value).catch(err => { console.log(err); formdata.setProccessing(false) })
-
             if (status) {
                 router.replace(data.data.data.authorization_url)
             }

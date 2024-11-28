@@ -3,6 +3,8 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import { CiMenuFries } from "react-icons/ci";
 import logo from "@/public/logo.png"
+import literesults_logo from "@/public/literesults_logo.png"
+import images from "@/public/images.jpg"
 import Image from 'next/image';
 import Modal from './Modal';
 import UseFormHandler from '../useFormHandler';
@@ -99,8 +101,12 @@ function Navbar() {
                     <div>
                         <div className='flex w-full items-center justify-center gap-5'>
                             <div className='-space-x-8'>
-                                <div className='w-24 h-24 inline-block bg-gray-100 rounded-full'></div>
-                                <div className='w-24 h-24 inline-block bg-gray-200 bg-opacity-50 rounded-full'></div>
+                                <div className='w-24 h-24 overflow-hidden inline-block bg-gray-100 rounded-full'>
+                                    <Image draggable={false} src={literesults_logo} className="h-10 w-24" alt="" />
+                                </div>
+                                <div className='w-24 h-24 overflow-hidden inline-block bg-gray-100 rounded-full'>
+                                    <Image draggable={false} src={images} className="h-10 w-24" alt="" />
+                                </div>
                             </div>
                         </div>
                         <div className='text-center text-xs text-gray-400'>Official Partners of Google Devfest Port Harcourt</div>

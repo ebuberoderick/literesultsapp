@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
+import literesults_logo from "@/public/literesults_logo.png"
+import images from "@/public/images.jpg"
 import { IoMailUnreadOutline } from "react-icons/io5";
 import img2 from "@/public/bannerImg.png"
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa6";
@@ -77,8 +79,12 @@ function Footer() {
                                 <div className=''>
                                     <div className='flex w-full items-center gap-5'>
                                         <div className='-space-x-4'>
-                                            <div className='w-10 h-10 inline-block bg-gray-100 rounded-full'></div>
-                                            <div className='w-10 h-10 inline-block bg-gray-200 bg-opacity-50 rounded-full'></div>
+                                            <div className='w-10 h-10 overflow-hidden inline-block bg-gray-100 rounded-full'>
+                                                <Image draggable={false} src={literesults_logo} className="h-10 w-24" alt="" />
+                                            </div>
+                                            <div className='w-10 h-10 overflow-hidden inline-block bg-gray-200 bg-opacity-50 rounded-full'>
+                                                <Image draggable={false} src={images} className="h-10 w-24" alt="" />
+                                            </div>
                                         </div>
                                     </div>
                                     <div className='text-xs text-gray-400'>Official Partners of Google Devfest Port Harcourt</div>
