@@ -61,7 +61,6 @@ function Navbar() {
 
     return (
         <div>
-
             <div className="fixed z-50 px-3 py-2 sm:py-5 w-screen bg-white backdrop-blur-xl bg-opacity-5">
                 <div className="bg-gray-50 bg-opacity-70 items-center flex rounded-lg max-w-3xl py-3 px-4 sm:pr-8 z-50 mx-auto">
                     <div className="">
@@ -72,8 +71,8 @@ function Navbar() {
                     <div className={`${!openNav && "hidden"} fixed bg-white backdrop-blur-xl bg-opacity-5 h-screen w-screen p-5 sm:p-0 flex sm:block items-center justify-center top-0 right-0 sm:h-auto sm:w-auto sm:relative flex-grow`}>
                         <div className="sm:flex space-y-4 sm:space-y-0 w-full rounded-xl p-4 sm:p-0 shadow-2xl sm:shadow-none bg-white sm:bg-transparent items-center">
                             <div className="flex-grow sm:flex justify-center">
-                                <div onClick={() => updateSideNav(false)} className="px-4 py-2"><a href="/#about">About</a></div>
-                                <div onClick={() => updateSideNav(false)} className="px-4 py-2"><a href="/#testimonials">Testimonials</a></div>
+                                <div onClick={() => updateSideNav(false)} className="px-4 py-2"><Link href="/#about">About</Link></div>
+                                <div onClick={() => updateSideNav(false)} className="px-4 py-2"><Link href="/#testimonials">Testimonials</Link></div>
                             </div>
                             <div className="">
                                 <div>
