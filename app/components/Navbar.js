@@ -39,8 +39,8 @@ function Navbar() {
         OnSubmit: async (value) => {
             const { data, status } = await subscribe(value).catch(err => { console.log(err); formdata.setProccessing(false) })
             if (status) {
-                console.log(data);
                 Cookies.set('liteApp', value.email)
+                updatexV(false)
             } else {
                 console.log(data);
                 let error = {}
@@ -48,6 +48,9 @@ function Navbar() {
                     error = { [key]: `${data.data[key][0]}` }
                 }
                 formdata.setError((prevState) => error)
+                if (data.message.split(" ")[0] === "Email") {
+                    formdata.setError((prevState) => ({ ...prevState, email: "Invalid email address" }))
+                }
             }
         }
     })
