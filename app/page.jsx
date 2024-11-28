@@ -128,7 +128,7 @@ function Page() {
 
       <div className="max-w-7xl overflow-hidden grid items-start xl:grid-cols-3 py-12 mx-auto px-5 space-y-6 lg:space-y-12">
         <div className="space-y-6 z-40 md:space-y-24 md:space-x-3 grid md:grid-cols-2 xl:grid-cols-1 relative xl:top-16">
-          <div data-aos="fade-left" className="xl:w-[276px] bg-green-300 overflow-hidden w-full relative rounded-3xl mx-auto h-[350px] gallery7">
+          <Link href="/courses" data-aos="fade-left" className="xl:w-[276px] bg-green-300 overflow-hidden w-full relative rounded-3xl mx-auto h-[350px] gallery7">
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
               <div className="font-semibold sm:text-xl">Web Development</div>
               <div className="text-xs">
@@ -138,25 +138,25 @@ function Page() {
             <div className="w-12 h-12 cursor-pointer bg-white rounded-full absolute top-5 right-5 flex items-center justify-center">
               {/* <Image draggable={false} src={heart} className="w-1/2" alt="" /> */}
             </div>
-          </div>
-          <div data-aos="fade-left" className="xl:w-[376px] bg-green-300 overflow-hidden w-full relative xl:left-12 rounded-3xl mx-auto h-[200px] gallery8">
+          </Link>
+          <Link href="/courses" data-aos="fade-left" className="xl:w-[376px] bg-green-300 overflow-hidden w-full relative xl:left-12 rounded-3xl mx-auto h-[200px] gallery8">
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
               <div className="font-semibold sm:text-xl">Mobile Development</div>
               <div className="text-xs">
                 Learn to create innovative, user-friendly apps with our expert-led mobile development courses.
               </div>
             </div>
-          </div>
+          </Link>
         </div>
         <div className="flex flex-col items-center md:flex-row xl:flex-col xl:items-end justify-center lg:gap-6">
-          <div data-aos="fade-up" className="h-[200px] bg-green-300 overflow-hidden w-full xl:w-[300px] rounded-3xl gallery9">
+          <Link href="/courses" data-aos="fade-up" className="h-[200px] bg-green-300 overflow-hidden w-full xl:w-[300px] rounded-3xl gallery9">
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
               <div className="font-semibold sm:text-xl">Digital Marketing</div>
               <div className="text-xs">
                 Boost your expertise in online strategies with our advanced digital marketing courses designed for success.
               </div>
             </div>
-          </div>
+          </Link>
           <div className="space-y-20 min-w-96 lg:pb-16 flex-grow">
             <div className="space-y-8">
               <div className="relative">
@@ -183,32 +183,32 @@ function Page() {
               </Link>
             </div>
           </div>
-          <div data-aos="fade-down" className="h-[200px] bg-green-300 overflow-hidden w-full xl:w-[440px] rounded-3xl mt-14 gallery10">
+          <Link href="/courses" data-aos="fade-down" className="h-[200px] bg-green-300 overflow-hidden w-full xl:w-[440px] rounded-3xl mt-14 gallery10">
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
               <div className="font-semibold sm:text-xl">UI/UX Design</div>
               <div className="text-xs">
                 Transform ideas into seamless user experiences with our creative and practical UI/UX design courses.
               </div>
             </div>
-          </div>
+          </Link>
         </div>
         <div className="space-y-6 z-40 md:space-y-24 md:space-x-3 grid md:grid-cols-2 xl:grid-cols-1 relative xl:-top-16">
-          <div data-aos="fade-right" className="xl:w-[276px]  bg-green-300 overflow-hidden relative rounded-3xl xl:ml-auto h-[350px] gallery11">
+          <Link href="/courses" data-aos="fade-right" className="xl:w-[276px]  bg-green-300 overflow-hidden relative rounded-3xl xl:ml-auto h-[350px] gallery11">
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
               <div className="font-semibold sm:text-xl">Cyber Security</div>
               <div className="text-xs">
                 With our in-depth cybersecurity courses, designed to provide you with necessary protective skills, secure the digital environment.
               </div>
             </div>
-          </div>
-          <div data-aos="fade-right" className="xl:w-[276px] bg-green-300 overflow-hidden relative rounded-3xl xl:mx-auto h-[350px] gallery12">
+          </Link>
+          <Link href="/courses" data-aos="fade-right" className="xl:w-[276px] bg-green-300 overflow-hidden relative rounded-3xl xl:mx-auto h-[350px] gallery12">
             <div className="p-3 py-6 space-y-2 bg-white rounded-3xl w-full">
               <div className="font-semibold sm:text-xl">Project Management</div>
               <div className="text-xs">
                 Gain the skills to lead and deliver successful projects with our dynamic project management courses.
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
 
