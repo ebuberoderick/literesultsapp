@@ -13,7 +13,6 @@ import { useRouter } from 'next/navigation';
 function Page() {
 
     const router = useRouter()
-    // const initializePayment = usePaystackPayment()
     const [courseList, setCourseList] = useState([])
     const [updData, setUpdateData] = useState({})
     const [pt, setPT] = useState("")
@@ -72,7 +71,8 @@ function Page() {
             value.amount_paid = (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "partial" ? 2 : 1)
             value.amount_balance = (updData.price - ((updData?.price * updData.discount) / 100)) - (updData.price - ((updData?.price * updData.discount) / 100)) / (pt === "partial" ? 2 : 1)
             value.discount = updData.discount
-            const { data, status } = await savedata(value).catch(err => console.log(err))
+            const { data, status } = await savedata(value).catch(err => {console.log(err);formdata.setProccessing(false)})
+
             if (status) {
                 router.replace(data.data.data.authorization_url)
             }
@@ -198,8 +198,7 @@ function Page() {
                             </div>
                         )
                     }
-                    {/* <PaystackButton {...componentProps} /> */}
-                    <div onClick={() => formdata.submit()} className="bg-green-800 rounded-full text-center cursor-pointer py-4 px-9 text-white font-bold">Pay now</div>
+                    <div onClick={() => !formdata.proccessing && formdata.submit()} className={`${formdata.proccessing ? "bg-gray-300" : "bg-green-800"} rounded-full text-center cursor-pointer py-4 px-9 text-white font-bold`}>Pay now</div>
                 </div>
             </Modal>
             <Footer />
