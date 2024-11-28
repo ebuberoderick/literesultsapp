@@ -7,6 +7,8 @@ import digitalM from "@/public/digitalM.jpeg"
 import webInst from "@/public/web  instructor.jpeg"
 import UIUX from "@/public/UIUX.jpeg"
 import about from "@/public/about.jpg"
+import bube from "@/public/bube.jpeg"
+import maam from "@/public/maam.png"
 import why1 from "@/public/african-woman-pointing-laptop-studying-with-colleague-university_242111-40133.jpg"
 import why2 from "@/public/study-group-african-people_23-2149156376.jpg"
 import why3 from "@/public/2149891363.jpg"
@@ -54,7 +56,9 @@ function Page() {
             </div>
             <div className="">
               <div className="inline-flex -space-x-7 hover:space-x-2 cursor-pointer">
-                <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
+                <div className="h-12 w-12 overflow-hidden border rounded-full transition-all duration-300 bg-gray-600">
+                  <Image src={bube} width={100} height={100} className='w-full h-full pointer-events-none' draggable={false} />
+                </div>
                 <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
                 <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
                 <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
@@ -359,7 +363,9 @@ function Page() {
 
           <div className="">
             <div className="inline-flex -space-x-7 hover:space-x-2 cursor-pointer">
-              <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
+              <div className="h-12 w-12 overflow-hidden border rounded-full transition-all duration-300 bg-gray-600">
+                <Image src={maam} width={100} height={100} className='w-full h-full pointer-events-none' draggable={false} />
+              </div>
               <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
               <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
               <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
