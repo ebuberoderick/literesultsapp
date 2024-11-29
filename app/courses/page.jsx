@@ -102,7 +102,7 @@ function Page() {
                         </div>
                         <div className="max-w-lg grid-cols-3 grid gap-7">
                             <div className="bg-white p-4 rounded-lg">
-                                <div className="text-2xl sm:text-4xl">300+</div>
+                                <div className="text-2xl sm:text-4xl">50+</div>
                                 <div className="text-xs sm:text-base">Students</div>
                             </div>
                             <div className="bg-white p-4 rounded-lg">

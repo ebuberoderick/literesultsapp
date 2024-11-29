@@ -64,7 +64,7 @@ function Page() {
                 <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
                 <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
               </div>
-              <div className="text-white">Over 300+ students</div>
+              <div className="text-white">Over 50+ students</div>
             </div>
           </div>
           <div className="h-full">
@@ -86,8 +86,8 @@ function Page() {
           <div className="h-full relative">
             <div className="bg-black h-[60%] w-[50%] absolute -top-9"></div>
             <div className="bg-black h-[60%] w-[50%] absolute -bottom-7 md:bottom-20 right-3"></div>
-            <div className="h-[80%] w-[80%] mx-auto min-h-96 relative" style={{ backgroundImage: about }}>
-              <Image src={about} draggable={false} alt='about us' className='h-full w-auto' />
+            <div className="h-[80%] w-[80%] mx-auto min-h-96 relative bg-green-500 bgImg" style={{ backgroundImage: about }}>
+              {/* <Image src={about} draggable={false} alt='about us' className='h-full object-contain w-auto' /> */}
             </div>
           </div>
           <div className="space-y-3 md:space-y-7 py-16">

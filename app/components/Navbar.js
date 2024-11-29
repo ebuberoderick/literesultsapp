@@ -19,9 +19,9 @@ function Navbar() {
 
     useEffect(() => {
         setTimeout(() => {
-            if (Cookies.get("liteApp") === "" || Cookies.get("liteApp") === undefined) {
+            // if (Cookies.get("liteApp") === "" || Cookies.get("liteApp") === undefined) {
                 updatexV(true)
-            }
+            // }
         }, 5000);
     }, [])
 
@@ -102,10 +102,10 @@ function Navbar() {
                         <div className='flex w-full items-center justify-center gap-5'>
                             <div className='-space-x-8'>
                                 <div className='w-24 h-24 overflow-hidden inline-block bg-gray-100 rounded-full'>
-                                    <Image draggable={false} src={literesults_logo} className="h-10 w-24" alt="" />
+                                    <Image draggable={false} src={literesults_logo} className="h-full w-full" alt="" />
                                 </div>
                                 <div className='w-24 h-24 overflow-hidden inline-block bg-gray-100 rounded-full'>
-                                    <Image draggable={false} src={images} className="h-10 w-24" alt="" />
+                                    <Image draggable={false} src={images} className="h-full w-full" alt="" />
                                 </div>
                             </div>
                         </div>

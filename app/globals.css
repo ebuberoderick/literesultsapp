@@ -31,15 +31,17 @@ body {
   min-width: 0;
 }
 
+.bgImg{
+  background-image: url("../public//about.jpg");
+  background-position: center;
+  background-size: cover;
+}
 
 
 .gallery1 {
   padding: 10px;
   display: flex;
   align-items: end;
-  background-image: url("../public/1000_F_327805074_PGHPQhTsJTFQMmQquJga3mqpLYoNU5Gk.jpg");
-  background-position: center;
-  background-size: cover;
 }
 .gallery2 {
   padding: 10px;
