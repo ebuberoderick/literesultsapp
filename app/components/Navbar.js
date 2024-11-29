@@ -19,9 +19,9 @@ function Navbar() {
 
     useEffect(() => {
         setTimeout(() => {
-            // if (Cookies.get("liteApp") === "" || Cookies.get("liteApp") === undefined) {
+            if (Cookies.get("liteApp") === "" || Cookies.get("liteApp") === undefined) {
                 updatexV(true)
-            // }
+            }
         }, 5000);
     }, [])
 
