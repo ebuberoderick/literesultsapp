@@ -16,10 +16,12 @@ function Page() {
     const [courseList, setCourseList] = useState([])
     const [updData, setUpdateData] = useState({})
     const [pt, setPT] = useState("")
+    const [loading, setLoading] = useState(true)
 
     const fetchcourses = async () => {
         await axios.get('https://skillapp.literesults.net/api/fetch_courses')
             .then(function (response) {
+                setLoading(false)
                 setCourseList(response.data.data[0]);
             })
     }
@@ -125,6 +127,45 @@ function Page() {
                 </div>
             </div>
             <div className="max-w-7xl mx-auto p-4 py-24 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+
+
+
+                {
+                    loading && (
+                        ["", "", "", "", "", ""].map((_, i) => (
+                            <div key={i} className="border relative border-gray-50 space-y-3 hover:shadow-lg hover:scale-105 transition-all duration-300 rounded-lg p-3">
+                                <div className="h-52 rounded-lg bg-gray-200 preload"></div>
+                                <div className=" space-y-4">
+                                    <div className="text-center space-y-2">
+                                        <div className="py-4 preload w-1/2 mx-auto"></div>
+                                        <div className="space-y-1">
+                                            <div className="py-2 preload h-3/4"></div>
+                                            <div className="py-2 preload w-4/5 mx-auto"></div>
+                                            <div className="py-2 preload w-1/2 mx-auto"></div>
+                                        </div>
+                                    </div>
+                                    <div className=" space-y-3">
+                                        <div className="space-y-3">
+                                            <div className="flex gap-2">
+                                                <div className="py-2 preload w-20"></div>
+                                                <div className="py-2 preload w-32"></div>
+                                            </div>
+                                            <div className="py-2 preload w-72"></div>
+                                            <div className="py-2 preload w-56"></div>
+                                        </div>
+                                        <div className="space-x-3 relative py-4 preload w-32"></div>
+                                    </div>
+                                    <div className="bg-green-800 rounded-full text-center cursor-pointer py-7 px-9 preload text-white font-bold"></div>
+                                </div>
+                            </div>
+                        ))
+                    )
+                }
+
+
+
+
                 {
                     courseList.map((data, i) => (
                         <div key={i} className="border relative border-gray-50 space-y-3 hover:shadow-lg hover:scale-105 transition-all duration-300 rounded-lg p-3">
