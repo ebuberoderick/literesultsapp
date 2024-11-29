@@ -102,7 +102,7 @@ function Page() {
                         </div>
                         <div className="max-w-lg grid-cols-3 grid gap-7">
                             <div className="bg-white p-4 rounded-lg">
-                                <div className="text-2xl sm:text-4xl">50+</div>
+                                <div className="text-2xl sm:text-4xl">100+</div>
                                 <div className="text-xs sm:text-base">Students</div>
                             </div>
                             <div className="bg-white p-4 rounded-lg">
@@ -110,7 +110,7 @@ function Page() {
                                 <div className="text-xs sm:text-base">Instructors</div>
                             </div>
                             <div className="bg-white p-4 rounded-lg">
-                                <div className="text-2xl sm:text-4xl">8+</div>
+                                <div className="text-2xl sm:text-4xl">13+</div>
                                 <div className="text-xs sm:text-base">Courses</div>
                             </div>
                         </div>
@@ -139,7 +139,7 @@ function Page() {
                                 </div>
                                 <div className=" space-y-3">
                                     <ul className="list-disc list-inside ">
-                                        <li>{data.duration} months</li>
+                                        <li><span className='font-bold'>Duration :</span> {data.duration} months</li>
                                         <li>Certificate on Completion</li>
                                         <li>Free mentorship</li>
                                     </ul>
@@ -193,7 +193,7 @@ function Page() {
                         pt !== "" && (
                             <div className="">
                                 <div className="">Amount To Pay</div>
-                                <div className="text-xl font-bold">&#8358;{Number(((updData.price - ((updData?.price * updData.discount) / 100)) * (pt === "half" ? 70 : 100) / 100)).toLocaleString("en-US")}</div>
+                                <div className="text-xl font-bold">&#8358;{Number(((updData.price - ((updData?.price * updData.discount) / 100)) * (pt === "half" ? 70 : 100) / 100)).toLocaleString("en-US")} {pt === "half" && <span className='text-[8px] bg-red-600 px-3 relative bottom-1 py-1 text-white rounded-full'>70%</span>}</div>
                             </div>
                         )
                     }

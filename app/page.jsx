@@ -8,6 +8,10 @@ import webInst from "@/public/web  instructor.jpeg"
 import UIUX from "@/public/UIUX.jpeg"
 import about from "@/public/about.jpg"
 import bube from "@/public/bube.jpeg"
+import std1 from "@/public/std1.jpeg"
+import std2 from "@/public/std2.jpeg"
+import std3 from "@/public/std3.jpeg"
+import std4 from "@/public/std4.jpeg"
 import maam from "@/public/maam.png"
 import why1 from "@/public/african-woman-pointing-laptop-studying-with-colleague-university_242111-40133.jpg"
 import why2 from "@/public/study-group-african-people_23-2149156376.jpg"
@@ -59,12 +63,20 @@ function Page() {
                 <div className="h-12 w-12 overflow-hidden border rounded-full transition-all duration-300 bg-gray-600">
                   <Image src={bube} width={100} height={100} className='w-full h-full pointer-events-none' draggable={false} />
                 </div>
-                <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
-                <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
-                <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
-                <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
+                <div className="h-12 w-12 overflow-hidden border rounded-full transition-all duration-300 bg-gray-600">
+                  <Image src={std1} width={100} height={100} className='w-full h-full pointer-events-none' draggable={false} />
+                </div>
+                <div className="h-12 w-12 overflow-hidden border rounded-full transition-all duration-300 bg-gray-600">
+                  <Image src={std2} width={100} height={100} className='w-full h-full pointer-events-none' draggable={false} />
+                </div>
+                <div className="h-12 w-12 overflow-hidden border rounded-full transition-all duration-300 bg-gray-600">
+                  <Image src={std3} width={100} height={100} className='w-full h-full pointer-events-none' draggable={false} />
+                </div>
+                <div className="h-12 w-12 overflow-hidden border rounded-full transition-all duration-300 bg-gray-600">
+                  <Image src={std4} width={100} height={100} className='w-full h-full pointer-events-none' draggable={false} />
+                </div>
               </div>
-              <div className="text-white">Over 50+ students</div>
+              <div className="text-white">Over 100+ students</div>
             </div>
           </div>
           <div className="h-full">
@@ -230,7 +242,9 @@ function Page() {
                         Enrolling in Literesults was the best decision for my career. The web development course gave me the skills and confidence to land my dream job in tech!
                       </div>
                       <div className="flex items-center gap-1">
-                        <div className="w-12 h-12 bg-green-500 rounded-full"></div>
+                        <div className="h-12 w-12 overflow-hidden border rounded-full transition-all duration-300 bg-gray-600">
+                          <Image src={std3} width={100} height={100} className='w-full h-full pointer-events-none' draggable={false} />
+                        </div>
                         <div className="-space-y-1">
                           <div className="font-bold">Pascal</div>
                           <div className="text-sm">Web development</div>
@@ -244,7 +258,9 @@ function Page() {
                         The digital marketing course was a game-changer for me. I not only learned the latest strategies but also how to apply them effectively in real-world scenarios.
                       </div>
                       <div className="flex items-center gap-1">
-                        <div className="w-12 h-12 bg-green-500 rounded-full"></div>
+                        <div className="h-12 w-12 overflow-hidden border rounded-full transition-all duration-300 bg-gray-600">
+                          <Image src={std4} width={100} height={100} className='w-full h-full pointer-events-none' draggable={false} />
+                        </div>
                         <div className="-space-y-1">
                           <div className="font-bold">Chiamaka</div>
                           <div className="text-sm">Digital marketing</div>
@@ -258,7 +274,9 @@ function Page() {
                         The mobile development course was fantastic! I went from having no coding experience to creating my first app in just a few months.
                       </div>
                       <div className="flex items-center gap-1">
-                        <div className="w-12 h-12 bg-green-500 rounded-full"></div>
+                        <div className="h-12 w-12 overflow-hidden border rounded-full transition-all duration-300 bg-gray-600">
+                          <Image src={std2} width={100} height={100} className='w-full h-full pointer-events-none' draggable={false} />
+                        </div>
                         <div className="-space-y-1">
                           <div className="font-bold">Benjamin</div>
                           <div className="text-sm">Mobile development</div>
