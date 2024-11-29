@@ -12,6 +12,10 @@ import std1 from "@/public/std1.jpeg"
 import std2 from "@/public/std2.jpeg"
 import std3 from "@/public/std3.jpeg"
 import std4 from "@/public/std4.jpeg"
+import inst1 from "@/public/inst1.jpeg"
+import inst2 from "@/public/inst2.jpeg"
+import inst3 from "@/public/inst1.jpeg"
+import inst4 from "@/public/inst2.jpeg"
 import maam from "@/public/maam.png"
 import why1 from "@/public/african-woman-pointing-laptop-studying-with-colleague-university_242111-40133.jpg"
 import why2 from "@/public/study-group-african-people_23-2149156376.jpg"
@@ -384,10 +388,18 @@ function Page() {
               <div className="h-12 w-12 overflow-hidden border rounded-full transition-all duration-300 bg-gray-600">
                 <Image src={maam} width={100} height={100} className='w-full h-full pointer-events-none' draggable={false} />
               </div>
-              <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
-              <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
-              <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
-              <div className="h-12 w-12 border rounded-full transition-all duration-300 bg-gray-600"></div>
+              <div className="h-12 w-12 overflow-hidden border rounded-full transition-all duration-300 bg-gray-600">
+                <Image src={inst1} width={100} height={100} className='w-full h-full pointer-events-none' draggable={false} />
+              </div>
+              <div className="h-12 w-12 overflow-hidden border rounded-full transition-all duration-300 bg-gray-600">
+                <Image src={inst2} width={100} height={100} className='w-full h-full pointer-events-none' draggable={false} />
+              </div>
+              <div className="h-12 w-12 overflow-hidden border rounded-full transition-all duration-300 bg-gray-600">
+                <Image src={inst3} width={100} height={100} className='w-full h-full pointer-events-none' draggable={false} />
+              </div>
+              <div className="h-12 w-12 overflow-hidden border rounded-full transition-all duration-300 bg-gray-600">
+                <Image src={inst4} width={100} height={100} className='w-full h-full pointer-events-none' draggable={false} />
+              </div>
             </div>
             <div className="text-white">Other Instructors</div>
           </div>
